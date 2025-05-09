@@ -1227,102 +1227,62 @@ OpenUtg.TextWrapped = true
 
 -- Scripts:
 
---// AntiFling
-local function XIRZKBY_fake_script() -- AntiFling.Script
-	local script = Instance.new('LocalScript')
-	script.Parent = AntiFling
+local function ZXMCQPU_fake_script() -- Respawn.LocalScript 
+	local script = Instance.new('LocalScript', Respawn)
 
-	script.Parent.MouseButton1Click:Connect(function()
-		local lp = game.Players.LocalPlayer
-		local char = lp.Character
-		if not char then return end
-		local hum = char:FindFirstChildOfClass("Humanoid")
-		if not hum then return end
-		local hrp = char:FindFirstChild("HumanoidRootPart")
-		if not hrp then return end
-
-		hum:SetStateEnabled(Enum.HumanoidStateType.Climbing, false)
-		hum:SetStateEnabled(Enum.HumanoidStateType.FallingDown, false)
-		hum:SetStateEnabled(Enum.HumanoidStateType.Flying, false)
-		hum:SetStateEnabled(Enum.HumanoidStateType.Freefall, false)
-		hum:SetStateEnabled(Enum.HumanoidStateType.GettingUp, false)
-		hum:SetStateEnabled(Enum.HumanoidStateType.Jumping, false)
-		hum:SetStateEnabled(Enum.HumanoidStateType.Landed, false)
-		hum:SetStateEnabled(Enum.HumanoidStateType.Physics, false)
-		hum:SetStateEnabled(Enum.HumanoidStateType.PlatformStanding, false)
-		hum:SetStateEnabled(Enum.HumanoidStateType.Ragdoll, false)
-		hum:SetStateEnabled(Enum.HumanoidStateType.Running, false)
-		hum:SetStateEnabled(Enum.HumanoidStateType.RunningNoPhysics, false)
-		hum:SetStateEnabled(Enum.HumanoidStateType.Seated, false)
-		hum:SetStateEnabled(Enum.HumanoidStateType.StrafingNoPhysics, false)
-		hum:SetStateEnabled(Enum.HumanoidStateType.Swimming, false)
-
-		hrp.Velocity = Vector3.zero
-		hrp.RotVelocity = Vector3.zero
-
-		game:GetService("RunService").Stepped:Connect(function()
-			hrp.Velocity = Vector3.zero
-			hrp.RotVelocity = Vector3.zero
-		end)
-
-		game:GetService("StarterGui"):SetCore("SendNotification", {
-			Title = "Notification";
-			Text = "Anti fling activated";
-			Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150";
-			Duration = 16;
-		})
-	end)
-end
-coroutine.wrap(XIRZKBY_fake_script)()
-
---// Respawn
-local function ZXMCQPU_fake_script() -- Respawn.LocalScript
-	local script = Instance.new('LocalScript')
-	script.Parent = Respawn
-
-	local function respawn()
+	function respawn()
 		local char = game.Players.LocalPlayer.Character
-		if char and char:FindFirstChildOfClass("Humanoid") then
-			char:FindFirstChildOfClass("Humanoid"):ChangeState(Enum.HumanoidStateType.Dead)
-		end
+		if char:FindFirstChildOfClass("Humanoid") then char:FindFirstChildOfClass("Humanoid"):ChangeState(15) end
 		char:ClearAllChildren()
 		local newChar = Instance.new("Model")
-		newChar.Name = "TempChar"
 		newChar.Parent = workspace
 		game.Players.LocalPlayer.Character = newChar
-		task.wait()
+		wait()
 		game.Players.LocalPlayer.Character = char
 		newChar:Destroy()
 	end
-
-	script.Parent.MouseButton1Click:Connect(respawn)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		respawn()
+	end)
 end
 coroutine.wrap(ZXMCQPU_fake_script)()
-
---// Netless
-local function HMRPCLX_fake_script() -- Netless.NetlessScript
-	local script = Instance.new('LocalScript')
-	script.Parent = Netless
+local function HMRPCLX_fake_script() -- Netless.NetlessScript 
+	local script = Instance.new('LocalScript', Netless)
 
 	script.Parent.MouseButton1Click:Connect(function()
-		local character = game.Players.LocalPlayer.Character
-		for _, v in pairs(character:GetDescendants()) do
-			if v:IsA("BasePart") and v.Name ~= "HumanoidRootPart" then
-				game:GetService("RunService").Heartbeat:Connect(function()
-					v.AssemblyLinearVelocity = Vector3.new(0, 35, 0)
+		for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
+			if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
+				game:GetService("RunService").Heartbeat:connect(function()
+					v.Velocity = Vector3.new(0,35,0)
+					wait(0.5)
 				end)
 			end
 		end
-
-		game:GetService("StarterGui"):SetCore("SendNotification", {
-			Title = "Notification",
-			Text = "Netless activated",
-			Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150",
-			Duration = 16
-		})
+	
+		game:GetService("StarterGui"):SetCore("SendNotification", { 
+			Title = "Notification";
+			Text = "Netless activated";
+			Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+		Duration = 16;
 	end)
 end
 coroutine.wrap(HMRPCLX_fake_script)()
+local function HTWNV_fake_script() -- AntiFling.AntiFlingScript 
+	local script = Instance.new('LocalScript', AntiFling)
+
+	script.Parent.TextBox.Focused:Connect(function()
+    		print("TextBox was clicked or focused!")
+		end)
+
+		TextBox.FocusLost:Connect(function(enterPressed)
+    		print("TextBox lost focus!")
+    		if enterPressed then
+        		print("User pressed Enter")
+    		end
+		end)
+	end)
+end
 coroutine.wrap(HTWNV_fake_script)()
 local function EEJMKD_fake_script() -- Main.Drag 
 	local script = Instance.new('LocalScript', Main)
