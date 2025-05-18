@@ -1,1351 +1,1011 @@
--- Objects
+restorebutton = Instance.new("ScreenGui")
+restorebutton.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
-local PrisonGui = Instance.new("ScreenGui")
-local Main = Instance.new("Frame")
-local Title = Instance.new("TextLabel")
-local TitleBar = Instance.new("TextLabel")
-local ObGuns = Instance.new("TextButton")
-local Close = Instance.new("TextButton")
-local KillAll = Instance.new("TextButton")
-local TaseBypass = Instance.new("TextButton")
-local RemoveDoors = Instance.new("TextButton")
-local Btools = Instance.new("TextButton")
-local BeNeutral = Instance.new("TextButton")
-local ModGun = Instance.new("TextButton")
-local ForceCgui = Instance.new("Frame")
-local ComSeperateBar = Instance.new("TextLabel")
-local InsertUser = Instance.new("TextBox")
-local UserHolder = Instance.new("TextLabel")
-local CrimTitle = Instance.new("TextLabel")
-local CrimTitleBar = Instance.new("TextLabel")
-local TextButton = Instance.new("TextButton")
-local CrimHideButton = Instance.new("TextButton")
-local TPshow = Instance.new("TextButton")
-local LocalCommands = Instance.new("Frame")
-local LocalCMD_Title = Instance.new("TextLabel")
-local NexusTPbut = Instance.new("TextButton")
-local CrimBaseTPbut = Instance.new("TextButton")
-local GuardAreaTPbut = Instance.new("TextButton")
-local FLY = Instance.new("TextButton")
-local NWalk = Instance.new("TextButton")
-local Njump = Instance.new("TextButton")
-local tfJump = Instance.new("TextButton")
-local Respawn = Instance.new("TextButton")
-local tfWalk = Instance.new("TextButton")
-local LocalCMD_BarTitle = Instance.new("TextLabel")
-local TheLocal = Instance.new("TextButton")
-local CrimG = Instance.new("TextButton")
-local tpgui = Instance.new("Frame")
-local TPtileBar = Instance.new("TextLabel")
-local TPYEET = Instance.new("TextButton")
-local UserHolderTP = Instance.new("TextLabel")
-local InsertUserTP = Instance.new("TextBox")
-local TpTitle = Instance.new("TextLabel")
-local RightSepBarTp = Instance.new("TextLabel")
-local TpHideButton = Instance.new("TextButton")
-local AmokahsLogo = Instance.new("ImageLabel")
-local SuperPunch = Instance.new("TextButton")
-local KillAura = Instance.new("TextButton")
-local BeCriminal = Instance.new("TextButton")
-local BeGuard = Instance.new("TextButton")
-local BeInmate = Instance.new("TextButton")
-local ArrestAll = Instance.new("TextButton")
-local Open = Instance.new("Frame")
-local OpenGUI = Instance.new("TextButton")
-local Credit = Instance.new("TextLabel")
-local Dino = Instance.new("TextLabel")
-local KA = Instance.new("Frame")
-local NameOfKa = Instance.new("TextLabel")
-local TrueOrFalse = Instance.new("TextLabel")
+b03d = Instance.new("TextButton",restorebutton)
+b03d.BackgroundColor3 = Color3.new(0/255,0/255,0/255)
+b03d.BorderColor3 = Color3.new(255/255,0/255,0/255)
+b03d.BorderSizePixel = 3
+b03d.Position = UDim2.new(1,-103,1,-23)
+b03d.Size = UDim2.new(0,100,0,20)
+b03d.Font = "SourceSans"
+b03d.FontSize = "Size18"
+b03d.Text = "Reload c00lgui"
+b03d.TextColor3 = Color3.new(255/255,255/255,255/255)
 
--- Properties
-
-PrisonGui.Name = "PrisonGui"
-PrisonGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-PrisonGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-PrisonGui.ResetOnSpawn = true
-
-Main.Name = "Main"
-Main.Parent = PrisonGui
-Main.BackgroundColor3 = Color3.new(0.54902, 0.0470588, 0.584314)
-Main.BorderSizePixel = 0
-Main.Position = UDim2.new(0.275862068, 0, 0.126237631, 0)
-Main.Size = UDim2.new(0, 338, 0, 301)
-
-Title.Name = "Title"
-Title.Parent = Main
-Title.BackgroundColor3 = Color3.new(1, 1, 1)
-Title.BackgroundTransparency = 1
-Title.BorderSizePixel = 0
-Title.Position = UDim2.new(0.165680468, 0, 0.00996677764, 0)
-Title.Size = UDim2.new(0, 224, 0, 31)
-Title.Font = Enum.Font.SourceSansLight
-Title.FontSize = Enum.FontSize.Size14
-Title.Text = "Prison Life v2.0.2 GUI"
-Title.TextColor3 = Color3.new(0.807843, 0.807843, 0.807843)
-Title.TextScaled = true
-Title.TextStrokeTransparency = 0
-Title.TextWrapped = true
-
-TitleBar.Name = "TitleBar"
-TitleBar.Parent = Main
-TitleBar.BackgroundColor3 = Color3.new(0, 0, 0)
-TitleBar.BackgroundTransparency = 0.5
-TitleBar.BorderSizePixel = 0
-TitleBar.Position = UDim2.new(0, 0, 0.116104871, 0)
-TitleBar.Size = UDim2.new(0, 338, 0, 6)
-TitleBar.Font = Enum.Font.SourceSans
-TitleBar.FontSize = Enum.FontSize.Size14
-TitleBar.Text = ""
-TitleBar.TextColor3 = Color3.new(0, 0, 0)
-
-ObGuns.Name = "ObGuns"
-ObGuns.Parent = Main
-ObGuns.BackgroundColor3 = Color3.new(0.988235, 0.564706, 1)
-ObGuns.BackgroundTransparency = 0.30000001192093
-ObGuns.BorderSizePixel = 0
-ObGuns.Position = UDim2.new(0.0177514795, 0, 0.16104874, 0)
-ObGuns.Size = UDim2.new(0, 325, 0, 22)
-ObGuns.Font = Enum.Font.SourceSans
-ObGuns.FontSize = Enum.FontSize.Size14
-ObGuns.Text = "OBTAIN GUNS"
-ObGuns.TextColor3 = Color3.new(1, 1, 1)
-ObGuns.TextScaled = true
-ObGuns.TextStrokeTransparency = 0
-ObGuns.TextWrapped = true
-
-Close.Name = "Close"
-Close.Parent = Main
-Close.BackgroundColor3 = Color3.new(1, 0.34902, 0.34902)
-Close.BackgroundTransparency = 0.30000001192093
-Close.BorderSizePixel = 0
-Close.Position = UDim2.new(0.908284009, 0, 0.0224719122, 0)
-Close.Size = UDim2.new(0, 24, 0, 24)
-Close.Font = Enum.Font.SourceSans
-Close.FontSize = Enum.FontSize.Size14
-Close.Text = ""
-Close.TextColor3 = Color3.new(0, 0, 0)
-
-KillAll.Name = "KillAll"
-KillAll.Parent = Main
-KillAll.BackgroundColor3 = Color3.new(0.988235, 0.564706, 1)
-KillAll.BackgroundTransparency = 0.30000001192093
-KillAll.BorderSizePixel = 0
-KillAll.Position = UDim2.new(0.0177514795, 0, 0.265917659, 0)
-KillAll.Size = UDim2.new(0, 159, 0, 22)
-KillAll.Font = Enum.Font.SourceSans
-KillAll.FontSize = Enum.FontSize.Size14
-KillAll.Text = "KILL ALL"
-KillAll.TextColor3 = Color3.new(1, 1, 1)
-KillAll.TextScaled = true
-KillAll.TextStrokeTransparency = 0
-KillAll.TextWrapped = true
-
-TaseBypass.Name = "TaseBypass"
-TaseBypass.Parent = Main
-TaseBypass.BackgroundColor3 = Color3.new(0.988235, 0.564706, 1)
-TaseBypass.BackgroundTransparency = 0.30000001192093
-TaseBypass.BorderSizePixel = 0
-TaseBypass.Position = UDim2.new(0.0177514795, 0, 0.370786548, 0)
-TaseBypass.Size = UDim2.new(0, 159, 0, 22)
-TaseBypass.Font = Enum.Font.SourceSans
-TaseBypass.FontSize = Enum.FontSize.Size14
-TaseBypass.Text = "TASER BYPASS"
-TaseBypass.TextColor3 = Color3.new(1, 1, 1)
-TaseBypass.TextScaled = true
-TaseBypass.TextStrokeTransparency = 0
-TaseBypass.TextWrapped = true
-
-RemoveDoors.Name = "RemoveDoors"
-RemoveDoors.Parent = Main
-RemoveDoors.BackgroundColor3 = Color3.new(0.988235, 0.564706, 1)
-RemoveDoors.BackgroundTransparency = 0.30000001192093
-RemoveDoors.BorderSizePixel = 0
-RemoveDoors.Position = UDim2.new(0.0177514795, 0, 0.483146131, 0)
-RemoveDoors.Size = UDim2.new(0, 325, 0, 22)
-RemoveDoors.Font = Enum.Font.SourceSans
-RemoveDoors.FontSize = Enum.FontSize.Size14
-RemoveDoors.Text = "REMOVE ALL DOORS"
-RemoveDoors.TextColor3 = Color3.new(1, 1, 1)
-RemoveDoors.TextScaled = true
-RemoveDoors.TextStrokeTransparency = 0
-RemoveDoors.TextWrapped = true
-
-Btools.Name = "Btools"
-Btools.Parent = Main
-Btools.BackgroundColor3 = Color3.new(0.988235, 0.564706, 1)
-Btools.BackgroundTransparency = 0.30000001192093
-Btools.BorderSizePixel = 0
-Btools.Position = UDim2.new(0.0177514795, 0, 0.58801502, 0)
-Btools.Size = UDim2.new(0, 159, 0, 22)
-Btools.Font = Enum.Font.SourceSans
-Btools.FontSize = Enum.FontSize.Size14
-Btools.Text = "BTOOLS"
-Btools.TextColor3 = Color3.new(1, 1, 1)
-Btools.TextScaled = true
-Btools.TextStrokeTransparency = 0
-Btools.TextWrapped = true
-
-BeNeutral.Name = "BeNeutral"
-BeNeutral.Parent = Main
-BeNeutral.BackgroundColor3 = Color3.new(0.988235, 0.564706, 1)
-BeNeutral.BackgroundTransparency = 0.30000001192093
-BeNeutral.BorderSizePixel = 0
-BeNeutral.Position = UDim2.new(0.756781578, 0, 0.696629226, 0)
-BeNeutral.Size = UDim2.new(0, 74, 0, 22)
-BeNeutral.Font = Enum.Font.SourceSans
-BeNeutral.FontSize = Enum.FontSize.Size14
-BeNeutral.Text = "NEUTRAL"
-BeNeutral.TextColor3 = Color3.new(1, 1, 1)
-BeNeutral.TextScaled = true
-BeNeutral.TextStrokeTransparency = 0
-BeNeutral.TextWrapped = true
-
-ModGun.Name = "ModGun"
-ModGun.Parent = Main
-ModGun.BackgroundColor3 = Color3.new(0.988235, 0.564706, 1)
-ModGun.BackgroundTransparency = 0.30000001192093
-ModGun.BorderSizePixel = 0
-ModGun.Position = UDim2.new(0.0177514795, 0, 0.801498115, 0)
-ModGun.Size = UDim2.new(0, 325, 0, 22)
-ModGun.Font = Enum.Font.SourceSans
-ModGun.FontSize = Enum.FontSize.Size14
-ModGun.Text = "MOD YOUR GUN (Hold the item first)"
-ModGun.TextColor3 = Color3.new(1, 1, 1)
-ModGun.TextScaled = true
-ModGun.TextStrokeTransparency = 0
-ModGun.TextWrapped = true
-
-ForceCgui.Name = "ForceCgui"
-ForceCgui.Parent = Main
-ForceCgui.BackgroundColor3 = Color3.new(0.54902, 0.0470588, 0.584314)
-ForceCgui.BorderSizePixel = 0
-ForceCgui.Position = UDim2.new(1, 0, 0.215946838, 0)
-ForceCgui.Size = UDim2.new(0, 155, 0, 198)
-
-ComSeperateBar.Name = "ComSeperateBar"
-ComSeperateBar.Parent = ForceCgui
-ComSeperateBar.BackgroundColor3 = Color3.new(1, 0.0823529, 0.956863)
-ComSeperateBar.BorderSizePixel = 0
-ComSeperateBar.Position = UDim2.new(0, 0, 0.0757575706, 0)
-ComSeperateBar.Size = UDim2.new(0, 1, 0, 167)
-ComSeperateBar.Font = Enum.Font.SourceSans
-ComSeperateBar.FontSize = Enum.FontSize.Size14
-ComSeperateBar.Text = ""
-ComSeperateBar.TextColor3 = Color3.new(0, 0, 0)
-
-InsertUser.Name = "InsertUser"
-InsertUser.Parent = ForceCgui
-InsertUser.BackgroundColor3 = Color3.new(1, 1, 1)
-InsertUser.BackgroundTransparency = 1
-InsertUser.BorderSizePixel = 0
-InsertUser.Position = UDim2.new(0.0064516128, 0, 0.186868697, 0)
-InsertUser.Size = UDim2.new(0, 154, 0, 50)
-InsertUser.Font = Enum.Font.SourceSansLight
-InsertUser.FontSize = Enum.FontSize.Size14
-InsertUser.Text = "USERNAME"
-InsertUser.TextColor3 = Color3.new(1, 1, 1)
-InsertUser.TextScaled = true
-InsertUser.TextWrapped = true
-
-UserHolder.Name = "UserHolder"
-UserHolder.Parent = ForceCgui
-UserHolder.BackgroundColor3 = Color3.new(0.00784314, 0.819608, 1)
-UserHolder.BorderSizePixel = 0
-UserHolder.Position = UDim2.new(0.0516129024, 0, 0.451651365, 0)
-UserHolder.Size = UDim2.new(0, 139, 0, 3)
-UserHolder.Font = Enum.Font.SourceSans
-UserHolder.FontSize = Enum.FontSize.Size14
-UserHolder.Text = ""
-UserHolder.TextColor3 = Color3.new(0, 0, 0)
-
-CrimTitle.Name = "CrimTitle"
-CrimTitle.Parent = ForceCgui
-CrimTitle.BackgroundColor3 = Color3.new(1, 1, 1)
-CrimTitle.BackgroundTransparency = 1
-CrimTitle.BorderSizePixel = 0
-CrimTitle.Position = UDim2.new(0.0064516128, 0, 0, 0)
-CrimTitle.Size = UDim2.new(0, 154, 0, 31)
-CrimTitle.Font = Enum.Font.SourceSansLight
-CrimTitle.FontSize = Enum.FontSize.Size14
-CrimTitle.Text = "CRIMINAL GUI"
-CrimTitle.TextColor3 = Color3.new(1, 1, 1)
-CrimTitle.TextScaled = true
-CrimTitle.TextStrokeTransparency = 0
-CrimTitle.TextWrapped = true
-
-CrimTitleBar.Name = "CrimTitleBar"
-CrimTitleBar.Parent = ForceCgui
-CrimTitleBar.BackgroundColor3 = Color3.new(0, 0, 0)
-CrimTitleBar.BackgroundTransparency = 0.5
-CrimTitleBar.BorderSizePixel = 0
-CrimTitleBar.Position = UDim2.new(0.0064516128, 0, 0.14952904, 0)
-CrimTitleBar.Size = UDim2.new(0, 154, 0, 1)
-CrimTitleBar.Font = Enum.Font.SourceSans
-CrimTitleBar.FontSize = Enum.FontSize.Size14
-CrimTitleBar.Text = ""
-CrimTitleBar.TextColor3 = Color3.new(0, 0, 0)
-
-TextButton.Parent = ForceCgui
-TextButton.BackgroundColor3 = Color3.new(0.309804, 0.321569, 1)
-TextButton.BackgroundTransparency = 0.5
-TextButton.BorderSizePixel = 0
-TextButton.Position = UDim2.new(0.0516129024, 0, 0.560606062, 0)
-TextButton.Size = UDim2.new(0, 139, 0, 50)
-TextButton.Font = Enum.Font.SourceSansLight
-TextButton.FontSize = Enum.FontSize.Size14
-TextButton.Text = "TURN INTO CRIMINAL"
-TextButton.TextColor3 = Color3.new(1, 1, 1)
-TextButton.TextScaled = true
-TextButton.TextStrokeTransparency = 0
-TextButton.TextWrapped = true
-
-CrimHideButton.Name = "CrimHideButton"
-CrimHideButton.Parent = ForceCgui
-CrimHideButton.BackgroundColor3 = Color3.new(1, 0.34902, 0.34902)
-CrimHideButton.BackgroundTransparency = 0.30000001192093
-CrimHideButton.BorderSizePixel = 0
-CrimHideButton.Position = UDim2.new(0.0322580636, 0, 0.89015615, 0)
-CrimHideButton.Size = UDim2.new(0, 146, 0, 18)
-CrimHideButton.Font = Enum.Font.SourceSansLight
-CrimHideButton.FontSize = Enum.FontSize.Size14
-CrimHideButton.Text = "HIDE"
-CrimHideButton.TextColor3 = Color3.new(1, 1, 1)
-CrimHideButton.TextScaled = true
-CrimHideButton.TextStrokeTransparency = 0
-CrimHideButton.TextWrapped = true
-
-TPshow.Name = "TPshow"
-TPshow.Parent = Main
-TPshow.BackgroundColor3 = Color3.new(0.988235, 0.564706, 1)
-TPshow.BackgroundTransparency = 0.30000001192093
-TPshow.BorderSizePixel = 0
-TPshow.Position = UDim2.new(0.0166848004, 0, 0.900033236, 0)
-TPshow.Size = UDim2.new(0, 104, 0, 22)
-TPshow.Font = Enum.Font.SourceSans
-TPshow.FontSize = Enum.FontSize.Size14
-TPshow.Text = "TELEPORT TO PLAYER"
-TPshow.TextColor3 = Color3.new(1, 1, 1)
-TPshow.TextScaled = true
-TPshow.TextStrokeTransparency = 0
-TPshow.TextWrapped = true
-
-LocalCommands.Name = "LocalCommands"
-LocalCommands.Parent = Main
-LocalCommands.BackgroundColor3 = Color3.new(1, 0.258824, 0.964706)
-LocalCommands.BorderSizePixel = 0
-LocalCommands.Position = UDim2.new(0, 0, 1, 0)
-LocalCommands.Size = UDim2.new(0, 338, 0, 100)
-
-LocalCMD_Title.Name = "LocalCMD_Title"
-LocalCMD_Title.Parent = LocalCommands
-LocalCMD_Title.BackgroundColor3 = Color3.new(0, 0, 0)
-LocalCMD_Title.BackgroundTransparency = 0.30000001192093
-LocalCMD_Title.BorderSizePixel = 0
-LocalCMD_Title.Size = UDim2.new(0, 338, 0, 22)
-LocalCMD_Title.Font = Enum.Font.SourceSans
-LocalCMD_Title.FontSize = Enum.FontSize.Size14
-LocalCMD_Title.Text = "COMMANDS FOR YOURSELF"
-LocalCMD_Title.TextColor3 = Color3.new(1, 1, 1)
-LocalCMD_Title.TextStrokeTransparency = 0
-
-NexusTPbut.Name = "NexusTPbut"
-NexusTPbut.Parent = LocalCommands
-NexusTPbut.BackgroundColor3 = Color3.new(1, 1, 1)
-NexusTPbut.BackgroundTransparency = 0.40000000596046
-NexusTPbut.BorderSizePixel = 0
-NexusTPbut.Position = UDim2.new(0.0177514795, 0, 0.319999993, 0)
-NexusTPbut.Size = UDim2.new(0, 98, 0, 16)
-NexusTPbut.Font = Enum.Font.SourceSans
-NexusTPbut.FontSize = Enum.FontSize.Size14
-NexusTPbut.Text = "TP TO NEXUS"
-NexusTPbut.TextColor3 = Color3.new(1, 1, 1)
-NexusTPbut.TextScaled = true
-NexusTPbut.TextStrokeTransparency = 0
-NexusTPbut.TextWrapped = true
-
-CrimBaseTPbut.Name = "CrimBaseTPbut"
-CrimBaseTPbut.Parent = LocalCommands
-CrimBaseTPbut.BackgroundColor3 = Color3.new(1, 1, 1)
-CrimBaseTPbut.BackgroundTransparency = 0.40000000596046
-CrimBaseTPbut.BorderSizePixel = 0
-CrimBaseTPbut.Position = UDim2.new(0.0177514795, 0, 0.550980508, 0)
-CrimBaseTPbut.Size = UDim2.new(0, 98, 0, 16)
-CrimBaseTPbut.Font = Enum.Font.SourceSans
-CrimBaseTPbut.FontSize = Enum.FontSize.Size14
-CrimBaseTPbut.Text = "TP TO CRIMINAL BASE"
-CrimBaseTPbut.TextColor3 = Color3.new(1, 1, 1)
-CrimBaseTPbut.TextScaled = true
-CrimBaseTPbut.TextStrokeTransparency = 0
-CrimBaseTPbut.TextWrapped = true
-
-GuardAreaTPbut.Name = "GuardAreaTPbut"
-GuardAreaTPbut.Parent = LocalCommands
-GuardAreaTPbut.BackgroundColor3 = Color3.new(1, 1, 1)
-GuardAreaTPbut.BackgroundTransparency = 0.40000000596046
-GuardAreaTPbut.BorderSizePixel = 0
-GuardAreaTPbut.Position = UDim2.new(0.0177514795, 0, 0.781960726, 0)
-GuardAreaTPbut.Size = UDim2.new(0, 98, 0, 16)
-GuardAreaTPbut.Font = Enum.Font.SourceSans
-GuardAreaTPbut.FontSize = Enum.FontSize.Size14
-GuardAreaTPbut.Text = "TP TO GUARD AREA"
-GuardAreaTPbut.TextColor3 = Color3.new(1, 1, 1)
-GuardAreaTPbut.TextScaled = true
-GuardAreaTPbut.TextStrokeTransparency = 0
-GuardAreaTPbut.TextWrapped = true
-
-FLY.Name = "FLY"
-FLY.Parent = LocalCommands
-FLY.BackgroundColor3 = Color3.new(1, 1, 1)
-FLY.BackgroundTransparency = 0.40000000596046
-FLY.BorderSizePixel = 0
-FLY.Position = UDim2.new(0.354683876, 0, 0.330000013, 0)
-FLY.Size = UDim2.new(0, 98, 0, 16)
-FLY.Font = Enum.Font.SourceSans
-FLY.FontSize = Enum.FontSize.Size14
-FLY.Text = "FLY 'E'"
-FLY.TextColor3 = Color3.new(1, 1, 1)
-FLY.TextScaled = true
-FLY.TextStrokeTransparency = 0
-FLY.TextWrapped = true
-
-NWalk.Name = "NWalk"
-NWalk.Parent = LocalCommands
-NWalk.BackgroundColor3 = Color3.new(1, 1, 1)
-NWalk.BackgroundTransparency = 0.40000000596046
-NWalk.BorderSizePixel = 0
-NWalk.Position = UDim2.new(0.354683876, 0, 0.560980558, 0)
-NWalk.Size = UDim2.new(0, 98, 0, 16)
-NWalk.Font = Enum.Font.SourceSans
-NWalk.FontSize = Enum.FontSize.Size14
-NWalk.Text = "NORMAL WALKSPEED"
-NWalk.TextColor3 = Color3.new(1, 1, 1)
-NWalk.TextScaled = true
-NWalk.TextStrokeTransparency = 0
-NWalk.TextWrapped = true
-
-Njump.Name = "Njump"
-Njump.Parent = LocalCommands
-Njump.BackgroundColor3 = Color3.new(1, 1, 1)
-Njump.BackgroundTransparency = 0.40000000596046
-Njump.BorderSizePixel = 0
-Njump.Position = UDim2.new(0.354683876, 0, 0.791960776, 0)
-Njump.Size = UDim2.new(0, 98, 0, 16)
-Njump.Font = Enum.Font.SourceSans
-Njump.FontSize = Enum.FontSize.Size14
-Njump.Text = "NORMAL JUMP HEIGHT"
-Njump.TextColor3 = Color3.new(1, 1, 1)
-Njump.TextScaled = true
-Njump.TextStrokeTransparency = 0
-Njump.TextWrapped = true
-
-tfJump.Name = "tfJump"
-tfJump.Parent = LocalCommands
-tfJump.BackgroundColor3 = Color3.new(1, 1, 1)
-tfJump.BackgroundTransparency = 0.40000000596046
-tfJump.BorderSizePixel = 0
-tfJump.Position = UDim2.new(0.691616237, 0, 0.781960726, 0)
-tfJump.Size = UDim2.new(0, 98, 0, 16)
-tfJump.Font = Enum.Font.SourceSans
-tfJump.FontSize = Enum.FontSize.Size14
-tfJump.Text = "+25 JUMP HEIGHT"
-tfJump.TextColor3 = Color3.new(1, 1, 1)
-tfJump.TextScaled = true
-tfJump.TextStrokeTransparency = 0
-tfJump.TextWrapped = true
-
-Respawn.Name = "Respawn"
-Respawn.Parent = LocalCommands
-Respawn.BackgroundColor3 = Color3.new(1, 1, 1)
-Respawn.BackgroundTransparency = 0.40000000596046
-Respawn.BorderSizePixel = 0
-Respawn.Position = UDim2.new(0.691616237, 0, 0.319999993, 0)
-Respawn.Size = UDim2.new(0, 98, 0, 16)
-Respawn.Font = Enum.Font.SourceSans
-Respawn.FontSize = Enum.FontSize.Size14
-Respawn.Text = "RESPAWN"
-Respawn.TextColor3 = Color3.new(1, 1, 1)
-Respawn.TextScaled = true
-Respawn.TextStrokeTransparency = 0
-Respawn.TextWrapped = true
-
-tfWalk.Name = "tfWalk"
-tfWalk.Parent = LocalCommands
-tfWalk.BackgroundColor3 = Color3.new(1, 1, 1)
-tfWalk.BackgroundTransparency = 0.40000000596046
-tfWalk.BorderSizePixel = 0
-tfWalk.Position = UDim2.new(0.691616237, 0, 0.550980508, 0)
-tfWalk.Size = UDim2.new(0, 98, 0, 16)
-tfWalk.Font = Enum.Font.SourceSans
-tfWalk.FontSize = Enum.FontSize.Size14
-tfWalk.Text = "+25 WALKSPEED"
-tfWalk.TextColor3 = Color3.new(1, 1, 1)
-tfWalk.TextScaled = true
-tfWalk.TextStrokeTransparency = 0
-tfWalk.TextWrapped = true
-
-LocalCMD_BarTitle.Name = "LocalCMD_BarTitle"
-LocalCMD_BarTitle.Parent = LocalCommands
-LocalCMD_BarTitle.BackgroundColor3 = Color3.new(1, 1, 1)
-LocalCMD_BarTitle.BackgroundTransparency = 0.30000001192093
-LocalCMD_BarTitle.BorderSizePixel = 0
-LocalCMD_BarTitle.Position = UDim2.new(0.0798816606, 0, 0.219999999, 0)
-LocalCMD_BarTitle.Size = UDim2.new(0, 283, 0, 4)
-LocalCMD_BarTitle.Font = Enum.Font.SourceSans
-LocalCMD_BarTitle.FontSize = Enum.FontSize.Size14
-LocalCMD_BarTitle.Text = ""
-LocalCMD_BarTitle.TextColor3 = Color3.new(1, 1, 1)
-LocalCMD_BarTitle.TextStrokeTransparency = 0
-
-TheLocal.Name = "TheLocal"
-TheLocal.Parent = Main
-TheLocal.BackgroundColor3 = Color3.new(0.988235, 0.564706, 1)
-TheLocal.BackgroundTransparency = 0.30000001192093
-TheLocal.BorderSizePixel = 0
-TheLocal.Position = UDim2.new(0.344114006, 0, 0.900033236, 0)
-TheLocal.Size = UDim2.new(0, 104, 0, 22)
-TheLocal.Font = Enum.Font.SourceSans
-TheLocal.FontSize = Enum.FontSize.Size14
-TheLocal.Text = "MORE LOCAL COMMANDS"
-TheLocal.TextColor3 = Color3.new(1, 1, 1)
-TheLocal.TextScaled = true
-TheLocal.TextStrokeTransparency = 0
-TheLocal.TextWrapped = true
-
-CrimG.Name = "CrimG"
-CrimG.Parent = Main
-CrimG.BackgroundColor3 = Color3.new(0.988235, 0.564706, 1)
-CrimG.BackgroundTransparency = 0.30000001192093
-CrimG.BorderSizePixel = 0
-CrimG.Position = UDim2.new(0.671616912, 0, 0.900033236, 0)
-CrimG.Size = UDim2.new(0, 104, 0, 22)
-CrimG.Font = Enum.Font.SourceSans
-CrimG.FontSize = Enum.FontSize.Size14
-CrimG.Text = "FORCE CRIMINAL PLAYER"
-CrimG.TextColor3 = Color3.new(1, 1, 1)
-CrimG.TextScaled = true
-CrimG.TextStrokeTransparency = 0
-CrimG.TextWrapped = true
-
-tpgui.Name = "tpgui"
-tpgui.Parent = Main
-tpgui.BackgroundColor3 = Color3.new(0.54902, 0.0470588, 0.584314)
-tpgui.BorderSizePixel = 0
-tpgui.Position = UDim2.new(-0.458579868, 0, 0.215946838, 0)
-tpgui.Size = UDim2.new(0, 155, 0, 198)
-
-TPtileBar.Name = "TPtileBar"
-TPtileBar.Parent = tpgui
-TPtileBar.BackgroundColor3 = Color3.new(0, 0, 0)
-TPtileBar.BackgroundTransparency = 0.5
-TPtileBar.BorderSizePixel = 0
-TPtileBar.Position = UDim2.new(0.0064516128, 0, 0.14952904, 0)
-TPtileBar.Size = UDim2.new(0, 154, 0, 1)
-TPtileBar.Font = Enum.Font.SourceSans
-TPtileBar.FontSize = Enum.FontSize.Size14
-TPtileBar.Text = ""
-TPtileBar.TextColor3 = Color3.new(0, 0, 0)
-
-TPYEET.Name = "TPYEET"
-TPYEET.Parent = tpgui
-TPYEET.BackgroundColor3 = Color3.new(0.309804, 0.321569, 1)
-TPYEET.BackgroundTransparency = 0.5
-TPYEET.BorderSizePixel = 0
-TPYEET.Position = UDim2.new(0.0580645166, 0, 0.560606062, 0)
-TPYEET.Size = UDim2.new(0, 140, 0, 50)
-TPYEET.Font = Enum.Font.SourceSansLight
-TPYEET.FontSize = Enum.FontSize.Size14
-TPYEET.Text = "TELEPORT"
-TPYEET.TextColor3 = Color3.new(1, 1, 1)
-TPYEET.TextScaled = true
-TPYEET.TextStrokeTransparency = 0
-TPYEET.TextWrapped = true
-
-UserHolderTP.Name = "UserHolderTP"
-UserHolderTP.Parent = tpgui
-UserHolderTP.BackgroundColor3 = Color3.new(0.00784314, 0.819608, 1)
-UserHolderTP.BorderSizePixel = 0
-UserHolderTP.Position = UDim2.new(0.0516129024, 0, 0.451651365, 0)
-UserHolderTP.Size = UDim2.new(0, 139, 0, 3)
-UserHolderTP.Font = Enum.Font.SourceSans
-UserHolderTP.FontSize = Enum.FontSize.Size14
-UserHolderTP.Text = ""
-UserHolderTP.TextColor3 = Color3.new(0, 0, 0)
-
-InsertUserTP.Name = "InsertUserTP"
-InsertUserTP.Parent = tpgui
-InsertUserTP.BackgroundColor3 = Color3.new(1, 1, 1)
-InsertUserTP.BackgroundTransparency = 1
-InsertUserTP.BorderSizePixel = 0
-InsertUserTP.Position = UDim2.new(0.0064516128, 0, 0.186868697, 0)
-InsertUserTP.Size = UDim2.new(0, 154, 0, 50)
-InsertUserTP.Font = Enum.Font.SourceSansLight
-InsertUserTP.FontSize = Enum.FontSize.Size14
-InsertUserTP.Text = "USERNAME"
-InsertUserTP.TextColor3 = Color3.new(1, 1, 1)
-InsertUserTP.TextScaled = true
-InsertUserTP.TextWrapped = true
-
-TpTitle.Name = "TpTitle"
-TpTitle.Parent = tpgui
-TpTitle.BackgroundColor3 = Color3.new(1, 1, 1)
-TpTitle.BackgroundTransparency = 1
-TpTitle.BorderSizePixel = 0
-TpTitle.Position = UDim2.new(0.0064516128, 0, 0, 0)
-TpTitle.Size = UDim2.new(0, 154, 0, 31)
-TpTitle.Font = Enum.Font.SourceSansLight
-TpTitle.FontSize = Enum.FontSize.Size14
-TpTitle.Text = "TELEPORT GUI"
-TpTitle.TextColor3 = Color3.new(1, 1, 1)
-TpTitle.TextScaled = true
-TpTitle.TextStrokeTransparency = 0
-TpTitle.TextWrapped = true
-
-RightSepBarTp.Name = "RightSepBarTp"
-RightSepBarTp.Parent = tpgui
-RightSepBarTp.BackgroundColor3 = Color3.new(1, 0.0823529, 0.956863)
-RightSepBarTp.BorderSizePixel = 0
-RightSepBarTp.Position = UDim2.new(0.993548393, 0, 0.0757575706, 0)
-RightSepBarTp.Size = UDim2.new(0, 1, 0, 167)
-RightSepBarTp.Font = Enum.Font.SourceSans
-RightSepBarTp.FontSize = Enum.FontSize.Size14
-RightSepBarTp.Text = ""
-RightSepBarTp.TextColor3 = Color3.new(0, 0, 0)
-
-TpHideButton.Name = "TpHideButton"
-TpHideButton.Parent = tpgui
-TpHideButton.BackgroundColor3 = Color3.new(1, 0.34902, 0.34902)
-TpHideButton.BackgroundTransparency = 0.30000001192093
-TpHideButton.BorderSizePixel = 0
-TpHideButton.Position = UDim2.new(0.0322580636, 0, 0.89015615, 0)
-TpHideButton.Size = UDim2.new(0, 146, 0, 18)
-TpHideButton.Font = Enum.Font.SourceSansLight
-TpHideButton.FontSize = Enum.FontSize.Size14
-TpHideButton.Text = "HIDE"
-TpHideButton.TextColor3 = Color3.new(1, 1, 1)
-TpHideButton.TextScaled = true
-TpHideButton.TextStrokeTransparency = 0
-TpHideButton.TextWrapped = true
-
-AmokahsLogo.Name = "AmokahsLogo"
-AmokahsLogo.Parent = Main
-AmokahsLogo.BackgroundColor3 = Color3.new(1, 1, 1)
-AmokahsLogo.BackgroundTransparency = 1
-AmokahsLogo.BorderSizePixel = 0
-AmokahsLogo.Position = UDim2.new(0.0177514795, 0, 0, 0)
-AmokahsLogo.Size = UDim2.new(0, 34, 0, 35)
-AmokahsLogo.Image = "rbxassetid://2715559615"
-
-SuperPunch.Name = "SuperPunch"
-SuperPunch.Parent = Main
-SuperPunch.BackgroundColor3 = Color3.new(0.988235, 0.564706, 1)
-SuperPunch.BackgroundTransparency = 0.30000001192093
-SuperPunch.BorderSizePixel = 0
-SuperPunch.Position = UDim2.new(0.511219442, 0, 0.58801502, 0)
-SuperPunch.Size = UDim2.new(0, 158, 0, 22)
-SuperPunch.Font = Enum.Font.SourceSans
-SuperPunch.FontSize = Enum.FontSize.Size14
-SuperPunch.Text = "SUPER PUNCH"
-SuperPunch.TextColor3 = Color3.new(1, 1, 1)
-SuperPunch.TextScaled = true
-SuperPunch.TextStrokeTransparency = 0
-SuperPunch.TextWrapped = true
-
-KillAura.Name = "KillAura"
-KillAura.Parent = Main
-KillAura.BackgroundColor3 = Color3.new(0.988235, 0.564706, 1)
-KillAura.BackgroundTransparency = 0.30000001192093
-KillAura.BorderColor3 = Color3.new(1, 0, 0)
-KillAura.BorderSizePixel = 0
-KillAura.Position = UDim2.new(0.511219442, 0, 0.262595385, 0)
-KillAura.Size = UDim2.new(0, 157, 0, 22)
-KillAura.Font = Enum.Font.SourceSans
-KillAura.FontSize = Enum.FontSize.Size14
-KillAura.Text = "TOGGABLE KILL AURA 'P'"
-KillAura.TextColor3 = Color3.new(1, 1, 1)
-KillAura.TextScaled = true
-KillAura.TextStrokeTransparency = 0
-KillAura.TextWrapped = true
-
-BeCriminal.Name = "BeCriminal"
-BeCriminal.Parent = Main
-BeCriminal.BackgroundColor3 = Color3.new(0.988235, 0.564706, 1)
-BeCriminal.BackgroundTransparency = 0.30000001192093
-BeCriminal.BorderSizePixel = 0
-BeCriminal.Position = UDim2.new(0.514421463, 0, 0.696629226, 0)
-BeCriminal.Size = UDim2.new(0, 74, 0, 22)
-BeCriminal.Font = Enum.Font.SourceSans
-BeCriminal.FontSize = Enum.FontSize.Size14
-BeCriminal.Text = "CRIMINAL"
-BeCriminal.TextColor3 = Color3.new(1, 1, 1)
-BeCriminal.TextScaled = true
-BeCriminal.TextStrokeTransparency = 0
-BeCriminal.TextWrapped = true
-
-BeGuard.Name = "BeGuard"
-BeGuard.Parent = Main
-BeGuard.BackgroundColor3 = Color3.new(0.988235, 0.564706, 1)
-BeGuard.BackgroundTransparency = 0.30000001192093
-BeGuard.BorderSizePixel = 0
-BeGuard.Position = UDim2.new(0.0177514795, 0, 0.696629226, 0)
-BeGuard.Size = UDim2.new(0, 77, 0, 22)
-BeGuard.Font = Enum.Font.SourceSans
-BeGuard.FontSize = Enum.FontSize.Size14
-BeGuard.Text = "GUARD"
-BeGuard.TextColor3 = Color3.new(1, 1, 1)
-BeGuard.TextScaled = true
-BeGuard.TextStrokeTransparency = 0
-BeGuard.TextWrapped = true
-
-BeInmate.Name = "BeInmate"
-BeInmate.Parent = Main
-BeInmate.BackgroundColor3 = Color3.new(0.988235, 0.564706, 1)
-BeInmate.BackgroundTransparency = 0.30000001192093
-BeInmate.BorderSizePixel = 0
-BeInmate.Position = UDim2.new(0.268615901, 0, 0.696629226, 0)
-BeInmate.Size = UDim2.new(0, 74, 0, 22)
-BeInmate.Font = Enum.Font.SourceSans
-BeInmate.FontSize = Enum.FontSize.Size14
-BeInmate.Text = "INMATE"
-BeInmate.TextColor3 = Color3.new(1, 1, 1)
-BeInmate.TextScaled = true
-BeInmate.TextStrokeTransparency = 0
-BeInmate.TextWrapped = true
-
-ArrestAll.Name = "ArrestAll"
-ArrestAll.Parent = Main
-ArrestAll.BackgroundColor3 = Color3.new(0.988235, 0.564706, 1)
-ArrestAll.BackgroundTransparency = 0.30000001192093
-ArrestAll.BorderSizePixel = 0
-ArrestAll.Position = UDim2.new(0.511834323, 0, 0.370786548, 0)
-ArrestAll.Size = UDim2.new(0, 159, 0, 22)
-ArrestAll.Font = Enum.Font.SourceSans
-ArrestAll.FontSize = Enum.FontSize.Size14
-ArrestAll.Text = "ARREST ALL"
-ArrestAll.TextColor3 = Color3.new(1, 1, 1)
-ArrestAll.TextScaled = true
-ArrestAll.TextStrokeTransparency = 0
-ArrestAll.TextWrapped = true
-
-Open.Name = "Open"
-Open.Parent = PrisonGui
-Open.BackgroundColor3 = Color3.new(1, 1, 1)
-Open.BackgroundTransparency = 1
-Open.BorderSizePixel = 0
-Open.Position = UDim2.new(0, 0, 0.915841579, 0)
-Open.Size = UDim2.new(0, 154, 0, 34)
-
-OpenGUI.Name = "OpenGUI"
-OpenGUI.Parent = Open
-OpenGUI.BackgroundColor3 = Color3.new(1, 0.505882, 0.886275)
-OpenGUI.BackgroundTransparency = 0.5
-OpenGUI.BorderSizePixel = 0
-OpenGUI.Size = UDim2.new(0, 154, 0, 34)
-OpenGUI.Font = Enum.Font.SourceSansLight
-OpenGUI.FontSize = Enum.FontSize.Size14
-OpenGUI.Text = "OPEN"
-OpenGUI.TextColor3 = Color3.new(0.972549, 0.0784314, 1)
-OpenGUI.TextScaled = true
-OpenGUI.TextStrokeTransparency = 0
-OpenGUI.TextWrapped = true
-
-Credit.Name = "Credit"
-Credit.Parent = PrisonGui
-Credit.BackgroundColor3 = Color3.new(1, 1, 1)
-Credit.BackgroundTransparency = 1
-Credit.BorderSizePixel = 0
-Credit.Position = UDim2.new(0, 0, 0.794397891, 0)
-Credit.Size = UDim2.new(0, 154, 0, 56)
-Credit.Font = Enum.Font.SourceSansSemibold
-Credit.FontSize = Enum.FontSize.Size14
-Credit.Text = "Lame Prison Life GUI by Amokah"
-Credit.TextColor3 = Color3.new(0.776471, 0.776471, 0.776471)
-Credit.TextScaled = true
-Credit.TextStrokeTransparency = 0.80000001192093
-Credit.TextTransparency = 0.5
-Credit.TextWrapped = true
-
-Dino.Name = "Dino"
-Dino.Parent = PrisonGui
-Dino.BackgroundColor3 = Color3.new(1, 1, 1)
-Dino.BackgroundTransparency = 1
-Dino.BorderSizePixel = 0
-Dino.Position = UDim2.new(-0.010610098, 0, 0.763497829, 0)
-Dino.Size = UDim2.new(0, 170, 0, 15)
-Dino.Font = Enum.Font.SourceSans
-Dino.FontSize = Enum.FontSize.Size14
-Dino.Text = "      Not good with FREE exploits."
-Dino.TextColor3 = Color3.new(1, 1, 1)
-Dino.TextScaled = true
-Dino.TextStrokeTransparency = 0
-Dino.TextWrapped = true
-
-KA.Name = "KA"
-KA.Parent = PrisonGui
-KA.BackgroundColor3 = Color3.new(1, 1, 1)
-KA.BackgroundTransparency = 1
-KA.BorderSizePixel = 0
-KA.Position = UDim2.new(0, 0, 0.640399575, 0)
-KA.Size = UDim2.new(0, 162, 0, 62)
-
-NameOfKa.Name = "NameOfKa"
-NameOfKa.Parent = KA
-NameOfKa.BackgroundColor3 = Color3.new(1, 1, 1)
-NameOfKa.BackgroundTransparency = 1
-NameOfKa.BorderSizePixel = 0
-NameOfKa.Size = UDim2.new(0, 157, 0, 30)
-NameOfKa.Font = Enum.Font.SourceSans
-NameOfKa.FontSize = Enum.FontSize.Size14
-NameOfKa.Text = "KILL AURA "
-NameOfKa.TextColor3 = Color3.new(0.72549, 0.329412, 0.337255)
-NameOfKa.TextScaled = true
-NameOfKa.TextStrokeColor3 = Color3.new(0.333333, 0, 0)
-NameOfKa.TextStrokeTransparency = 0.5
-NameOfKa.TextWrapped = true
-NameOfKa.TextXAlignment = Enum.TextXAlignment.Left
-
-TrueOrFalse.Name = "TrueOrFalse"
-TrueOrFalse.Parent = KA
-TrueOrFalse.BackgroundColor3 = Color3.new(1, 1, 1)
-TrueOrFalse.BackgroundTransparency = 1
-TrueOrFalse.BorderSizePixel = 0
-TrueOrFalse.Position = UDim2.new(0, 0, 0.478372395, 0)
-TrueOrFalse.Size = UDim2.new(0, 148, 0, 33)
-TrueOrFalse.Font = Enum.Font.SourceSans
-TrueOrFalse.FontSize = Enum.FontSize.Size14
-TrueOrFalse.Text = "TRUE"
-TrueOrFalse.TextColor3 = Color3.new(0.768628, 0.156863, 0.109804)
-TrueOrFalse.TextScaled = true
-TrueOrFalse.TextStrokeTransparency = 0.5
-TrueOrFalse.TextWrapped = true
-TrueOrFalse.TextXAlignment = Enum.TextXAlignment.Left
-
-Main.Visible = false
-LocalCommands.Visible = false
-ForceCgui.Visible = false
-tpgui.Visible = false
-KA.Visible = true
-TrueOrFalse.Text = "nil"
-TrueOrFalse.TextColor3 = Color3.new(255, 0, 191)
-
-
-OpenGUI.MouseButton1Down:connect(function()
-	Main.Visible = true
-wait(5)
-Dino.TextTransparency = 0.1
-Dino.TextStrokeTransparency = 0.1
-wait(0.1)
-Dino.TextTransparency = 0.2
-Dino.TextStrokeTransparency = 0.2
-wait(0.1)
-Dino.TextTransparency = 0.3
-Dino.TextStrokeTransparency = 0.3
-wait(0.1)
-Dino.TextTransparency = 0.4
-Dino.TextStrokeTransparency = 0.4
-wait(0.1)
-Dino.TextTransparency = 0.5
-Dino.TextStrokeTransparency = 0.5
-wait(0.1)
-Dino.TextTransparency = 0.6
-Dino.TextStrokeTransparency = 0.6
-wait(0.1)
-Dino.TextTransparency = 0.7
-Dino.TextStrokeTransparency = 0.7
-wait(0.1)
-Dino.TextTransparency = 0.8
-Dino.TextStrokeTransparency = 0.8
-wait(0.1)
-Dino.Visible = false
+b03d.MouseButton1Down:connect(function()
+    if game.Players.LocalPlayer.PlayerGui:FindFirstChild("c00lgui") then
+        game.Players.LocalPlayer.PlayerGui:FindFirstChild("c00lgui"):Remove()    
+    end    
+    loadstring(game:GetObjects("rbxassetid://11801912144")[1].Source)()
 end)
 
-Close.MouseButton1Down:connect(function()
-	Main.Visible = false
-	wait(0.1)
-Dino.Visible = true
-Dino.TextTransparency = 0.8
-Dino.TextStrokeTransparency = 0.8
-wait(0.1)
-Dino.TextTransparency = 0.7
-Dino.TextStrokeTransparency = 0.7
-wait(0.1)
-Dino.TextTransparency = 0.6
-Dino.TextStrokeTransparency = 0.6
-wait(0.1)
-Dino.TextTransparency = 0.5
-Dino.TextStrokeTransparency = 0.5
-wait(0.1)
-Dino.TextTransparency = 0.4
-Dino.TextStrokeTransparency = 0.4
-wait(0.1)
-Dino.TextTransparency = 0.3
-Dino.TextStrokeTransparency = 0.3
-wait(0.1)
-Dino.TextTransparency = 0.2
-Dino.TextStrokeTransparency = 0.2
-wait(0.1)
-Dino.TextTransparency = 0.1
-Dino.TextStrokeTransparency = 0.1
-end)
+Properties = {nil,"Name","Parent","ClassName","BrickColor","Material","Reflectance","Transparency","Position","Rotation","RotVelocity","Velocity","Anchored","CanCollide","Locked","Elasticity","FormFactor","Friction","Shape","Size","BackSurface","BottomSurface","FrontSurface","LeftSurface","RightSurface","TopSurface","CreatorId","VertexColor","Volume","Ticket","AccountAge","VideoQualitySettings","UploadSetting","TweenStatus","TopBottom","TickCountSampleMethod","ThreadPoolConfig","SurfaceType","SurfaceConstrait","Style","Stuff","Status","SpecialKey","SoundType","SleepAdjustMethod","SizeConstraint","Shadow","SavedQualitySetting","ReverbType","Resolution","QualityLevel","PyrimidSides","PrivilegeType","PrismSides","PriorityMethod","PlayerChatType","PhysicsSendMethod","PhysicsRecieveMethod","PartType","PacketReliability","NormalId","MoveState","MeshType","MaterialQuality","LevelOfDetailSetting","LeftRight","KeywordFilterType","JointType","InputType","InOut","HandlesStyle","GraphicsMode","GeometryQuality","Genre","GearType","GearGenreSetting","FunctionalTestResult","FriendStatus","FriendRequestEvent","FramerateManagerMode","FrameStyle","ErrorReporting","PhysicsThrottle","Enviromental","EasingStyle","EasingDirection","DialogTone","DialogPurpose","D3DFORMAT","D3DDEVTYPE","CreatorType","ControlMode","ConcurrencyModel","ChatStyle","ChatMode","ChatColor","CenterDialogType","CellOrientation","CellMaterial","CellBlock","CameraType","ButtonStyle","Button","BuildPermission","BodyPart","BinType","Bevels","Axis","Antialiasing","AnimationPriority","AffectType","ActionType","AASamples","Source","ScriptsDisabled","GarbageCollectionLimit","GarbageCollectionFrequency","RobloxLocked","Version","AttachmentForward","AttachmentPos","AttachmentRight","AttachmentUp","AnimationId","HeadColor","RightArmColor","LeftArmColor","TorsoColor","LeftLegColor","RightLegColor","Value","CameraType","CameraSubject","BaseTextureId","BodyPart","MeshId","OverlayTextureId","MaxActivationDistance","Shiny","Specular","Texture","Face","GripForward","GripPos","GripRight","GripUp","TextureId","TeamColor","Enabled","position","CFrame","velocity","AbsolutePosition","AbsoluteSize","Active","BackgroundColor3","BackgroundTransparency","BorderColor3","BorderSizePixel","SizeConstraint","Visible","ZIndex","C0","C1","Part0","Part1","BinType","LeftLeg","RightLeg","Torso","Health","MaxHealth","WalkSpeed","Jump","PlatformStand","Sit","AutoButtonColor","Image","LinkedSource","Disabled","Text","PrimaryPart","CurrentAngle","DesiredAngle","MaxVelocity","PantsTemplate","ShirtTemplate","SoundId","Pitch","IsPlaying","IsPaused","Looped","PlayOnRemove","StudsPerTileU","StudsPerTileV","userId","BubbleChat","ClassicChat","MaxPlayers","NumPlayers","LocalPlayer","CharacterAppearance","Character","CurrentCamera","Ambient","Brightness","ColorShift_Bottom","ColorShift_Top","ShadowColor","TimeOfDay","AmbientReverb","DistanceFactor","DopplerScale","RolloffScale","Color","angularvelocity","maxTorque","Offset","Scale","Heat","Range","Angle","DataCost","maxForce","MaxSpeed","D","P","Adornee","CelestialBodiesShown","SkyboxBk","SkyboxDn","SkyboxFt","SkyboxLf","SkyboxRt","SkyboxUp","StarCount"}
 
-CrimG.MouseButton1Down:connect(function()
-	ForceCgui.Visible = true
-end)
-
-CrimHideButton.MouseButton1Down:connect(function()
-	ForceCgui.Visible = false
-end)
-
-TheLocal.MouseButton1Down:connect(function()
-	if LocalCommands.Visible == false then
-		LocalCommands.Visible = true
-	elseif LocalCommands.Visible == true then
-		LocalCommands.Visible = false
-	end
-end)
-
-TextButton.MouseButton1Down:connect(function()
-	for i,v in pairs(Workspace.Prison_ITEMS.giver:GetChildren()) do
-
-OwO = Workspace.Remote.ItemHandler:InvokeServer(v.ITEMPICKUP)
-end
-wait(4)
-	Target = InsertUser.Text
-
-game.Players.LocalPlayer.Character.Humanoid.Name = 1
-local l = game.Players.LocalPlayer.Character["1"]:Clone()
-l.Parent = game.Players.LocalPlayer.Character
-l.Name = "Humanoid"
-wait(0.1)
-game.Players.LocalPlayer.Character["1"]:Destroy()
-game.Workspace.CurrentCamera.CameraSubject = game.Players.LocalPlayer.Character
-game.Players.LocalPlayer.Character.Animate.Disabled = true
-wait(0.1)
-game.Players.LocalPlayer.Character.Animate.Disabled = false
-game.Players.LocalPlayer.Character.Humanoid.DisplayDistanceType = "None"
-for i,v in pairs(game:GetService'Players'.LocalPlayer.Backpack:GetChildren())do
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
-end
-wait(0.1)
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[Target].Character.HumanoidRootPart.CFrame
-wait(0.1)
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[Target].Character.HumanoidRootPart.CFrame
-wait(0.2)
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-921, 95, 2138))
-wait(0)
-local CS = game.Workspace["Criminals Spawn"]
-for i,v in pairs(CS:GetChildren())do
-	if v.ClassName == "SpawnLocation" then
-		v.CanCollide = false
-	end
-end
-end)
-
-NWalk.MouseButton1Down:connect(function()
-	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
-end)
-
-NexusTPbut.MouseButton1Down:connect(function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(879,99,2377)
-end)
-
-CrimBaseTPbut.MouseButton1Down:connect(function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-943, 96, 2055)
-end)
-
-tfWalk.MouseButton1Down:connect(function()
-	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 41
-end)
-
-tfJump.MouseButton1Down:connect(function()
-	game.Players.LocalPlayer.Character.Humanoid.JumpPower = 75
-end)
-
-Njump.MouseButton1Down:connect(function()
-	game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
-end)
-
-GuardAreaTPbut.MouseButton1Down:connect(function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(802,99,2270)
-end)
-
-Respawn.MouseButton1Down:connect(function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0, -496, 0)
-end)
-
-ObGuns.MouseButton1Down:connect(function()
-	for i,v in pairs(Workspace.Prison_ITEMS.giver:GetChildren()) do
-
-OwO = Workspace.Remote.ItemHandler:InvokeServer(v.ITEMPICKUP)
-end
-end)
-
-TaseBypass.MouseButton1Down:connect(function()
-	game.Players.LocalPlayer.Character.ClientInputHandler.Disabled = true
-	game.Players.LocalPlayer.CharacterAdded:connect(function()
-	game.Workspace:WaitForChild(game.Players.LocalPlayer.Name)
-	game.Players.LocalPlayer.Character.ClientInputHandler.Disabled = true
-	end)
-end)
-
-RemoveDoors.MouseButton1Down:connect(function()
-				Workspace.Prison_Cellblock.doors:Destroy()
-			
-			for i,v in pairs(workspace:GetChildren())do
-					if v.Name == "Doors" then
-				v:Destroy()
-			end
-	end
-end)
-
-Btools.MouseButton1Down:connect(function()
-	local tool1 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
-	local tool2 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
-	local tool3 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
-	local tool4 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
-	local tool5 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
-	tool1.BinType = "Clone"
-	tool2.BinType = "GameTool"
-	tool3.BinType = "Hammer"
-	tool4.BinType = "Script"
-	tool5.BinType = "Grab"
-end)
-
-ModGun.MouseButton1Down:connect(function()
-local m = require(game:GetService('Players').LocalPlayer.Character:FindFirstChildOfClass("Tool").GunStates)
-                m.Damage = 100
-                m.MaxAmmo = math.huge
-                m.CurrentAmmo = math.huge
-                m.AutoFire = true
-                m.FireRate = 0
-end)
-
-KillAll.MouseButton1Down:connect(function()
-	
-workspace.Remote.TeamEvent:FireServer("Medium stone grey")
-
-game.Workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["Remington 870"].ITEMPICKUP)	
-
-wait(0.5)
-function kill(a)
-local A_1 =
-{
-[1] =
-{
-["RayObject"] = Ray.new(Vector3.new(845.555908, 101.429337, 2269.43945), Vector3.new(-391.152252, 8.65560055, -83.2166901)),
-["Distance"] = 3.2524313926697,
-["Cframe"] = CFrame.new(840.310791, 101.334137, 2267.87988, 0.0636406094, 0.151434347, -0.986416459, 0, 0.988420188, 0.151741937, 0.997972965, -0.00965694897, 0.0629036576),
-["Hit"] = a.Character.Head
-},
-   [2] =
-{
-["RayObject"] = Ray.new(Vector3.new(845.555908, 101.429337, 2269.43945), Vector3.new(-392.481476, -8.44939327, -76.7261353)),
-["Distance"] = 3.2699294090271,
-["Cframe"] = CFrame.new(840.290466, 101.184189, 2267.93506, 0.0964837447, 0.0589403138, -0.993587971, 4.65661287e-10, 0.998245299, 0.0592165813, 0.995334625, -0.00571343815, 0.0963144377),
-["Hit"] = a.Character.Head
-},
-[3] =
-{
-["RayObject"] = Ray.new(Vector3.new(845.555908, 101.429337, 2269.43945), Vector3.new(-389.21701, -2.50536323, -92.2163162)),
-["Distance"] = 3.1665518283844,
-["Cframe"] = CFrame.new(840.338867, 101.236496, 2267.80371, 0.0166504811, 0.0941716284, -0.995416701, 1.16415322e-10, 0.995554805, 0.0941846818, 0.999861419, -0.00156822044, 0.0165764652),
-["Hit"] = a.Character.Head
-},
-[4] =
-{
-["RayObject"] = Ray.new(Vector3.new(845.555908, 101.429337, 2269.43945), Vector3.new(-393.353973, 3.13988972, -72.5452042)),
-["Distance"] = 3.3218522071838,
-["Cframe"] = CFrame.new(840.277222, 101.285957, 2267.9707, 0.117109694, 0.118740402, -0.985994935, -1.86264515e-09, 0.992826641, 0.119563118, 0.993119001, -0.0140019981, 0.116269611),
-["Hit"] = a.Character.Head
-},
-[5] =
-{
-["RayObject"] = Ray.new(Vector3.new(845.555908, 101.429337, 2269.43945), Vector3.new(-390.73172, 3.2097764, -85.5477524)),
-["Distance"] = 3.222757101059,
-["Cframe"] = CFrame.new(840.317993, 101.286423, 2267.86035, 0.0517584644, 0.123365127, -0.991010666, 0, 0.992340803, 0.123530701, 0.99865967, -0.00639375951, 0.0513620302),
-["Hit"] = a.Character.Head
-}
-}
-local A_2 = game.Players.LocalPlayer.Backpack["Remington 870"]
-local Event = game:GetService("ReplicatedStorage").ShootEvent
-Event:FireServer(A_1, A_2)
-Event:FireServer(A_1, A_2)
+if script ~= nil then
+    if Game:FindFirstChild("NetworkClient") ~= nil then
+        repeat wait() until Game.Players.LocalPlayer ~= nil
+    end
 end
 
-for i,v in pairs(game.Players:GetChildren())do
-if v.Name ~= game.Players.LocalPlayer.Name then
-kill(v)
-end
-end
-wait(1)
-workspace.Remote.TeamEvent:FireServer("Bright orange")
-
-end)
-
-TPshow.MouseButton1Down:connect(function()
-	tpgui.Visible = true
-end)
-
-TpHideButton.MouseButton1Down:connect(function()
-	tpgui.Visible = false
-end)
-
-TPYEET.MouseButton1Down:connect(function()
-	Target = InsertUserTP.Text
-	
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[Target].Character.HumanoidRootPart.CFrame
-end)
-
-FLY.MouseButton1Down:connect(function()
-	repeat wait()
-   until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:findFirstChild("Torso") and game.Players.LocalPlayer.Character:findFirstChild("Humanoid")
-local mouse = game.Players.LocalPlayer:GetMouse()
-repeat wait() until mouse
-local plr = game.Players.LocalPlayer
-local torso = plr.Character.Torso
-local flying = true
-local deb = true
-local ctrl = {f = 0, b = 0, l = 0, r = 0}
-local lastctrl = {f = 0, b = 0, l = 0, r = 0}
-local maxspeed = 50
-local speed = 0
-
-function Fly()
-local bg = Instance.new("BodyGyro", torso)
-bg.P = 9e4
-bg.maxTorque = Vector3.new(9e9, 9e9, 9e9)
-bg.cframe = torso.CFrame
-local bv = Instance.new("BodyVelocity", torso)
-bv.velocity = Vector3.new(0,0.1,0)
-bv.maxForce = Vector3.new(9e9, 9e9, 9e9)
-repeat wait()
-plr.Character.Humanoid.PlatformStand = true
-if ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0 then
-speed = speed+.5+(speed/maxspeed)
-if speed > maxspeed then
-speed = maxspeed
-end
-elseif not (ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0) and speed ~= 0 then
-speed = speed-1
-if speed < 0 then
-speed = 0
-end
-end
-if (ctrl.l + ctrl.r) ~= 0 or (ctrl.f + ctrl.b) ~= 0 then
-bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (ctrl.f+ctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(ctrl.l+ctrl.r,(ctrl.f+ctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
-lastctrl = {f = ctrl.f, b = ctrl.b, l = ctrl.l, r = ctrl.r}
-elseif (ctrl.l + ctrl.r) == 0 and (ctrl.f + ctrl.b) == 0 and speed ~= 0 then
-bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (lastctrl.f+lastctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(lastctrl.l+lastctrl.r,(lastctrl.f+lastctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
-else
-bv.velocity = Vector3.new(0,0.1,0)
-end
-bg.cframe = game.Workspace.CurrentCamera.CoordinateFrame * CFrame.Angles(-math.rad((ctrl.f+ctrl.b)*50*speed/maxspeed),0,0)
-until not flying
-ctrl = {f = 0, b = 0, l = 0, r = 0}
-lastctrl = {f = 0, b = 0, l = 0, r = 0}
-speed = 0
-bg:Destroy()
-bv:Destroy()
-plr.Character.Humanoid.PlatformStand = false
-end
-mouse.KeyDown:connect(function(key)
-if key:lower() == "e" then
-if flying then flying = false
-else
-flying = true
-Fly()
-end
-elseif key:lower() == "w" then
-ctrl.f = 1
-elseif key:lower() == "s" then
-ctrl.b = -1
-elseif key:lower() == "a" then
-ctrl.l = -1
-elseif key:lower() == "d" then
-ctrl.r = 1
-end
-end)
-mouse.KeyUp:connect(function(key)
-if key:lower() == "w" then
-ctrl.f = 0
-elseif key:lower() == "s" then
-ctrl.b = 0
-elseif key:lower() == "a" then
-ctrl.l = 0
-elseif key:lower() == "d" then
-ctrl.r = 0
-end
-end)
-Fly()
-end)
-
-SuperPunch.MouseButton1Down:connect(function()
-	mainRemotes = game.ReplicatedStorage
-meleeRemote = mainRemotes['meleeEvent']
-mouse = game.Players.LocalPlayer:GetMouse()
-punching = false
-cooldown = false
-
-function punch()
-cooldown = true
-local part = Instance.new("Part", game.Players.LocalPlayer.Character)
-part.Transparency = 1
-part.Size = Vector3.new(5, 2, 3)
-part.CanCollide = false
-local w1 = Instance.new("Weld", part)
-w1.Part0 = game.Players.LocalPlayer.Character.Torso
-w1.Part1 = part
-w1.C1 = CFrame.new(0,0,2)
-part.Touched:connect(function(hit)
-if game.Players:FindFirstChild(hit.Parent.Name) then
-local plr = game.Players:FindFirstChild(hit.Parent.Name)
-if plr.Name ~= game.Players.LocalPlayer.Name then
-part:Destroy()
-
-for i = 1,100 do
-meleeRemote:FireServer(plr)
-end
-end
-end
-end)
-
-wait(1)
-cooldown = false
-part:Destroy()
-end
-
-
-mouse.KeyDown:connect(function(key)
-if cooldown == false then
-if key:lower() == "f" then
-
-punch()
-
-end
-end
-end)
-end)
-
-BeInmate.MouseButton1Down:connect(function()
-	Workspace.Remote.TeamEvent:FireServer("Bright orange")
-end)
-
-BeGuard.MouseButton1Down:connect(function()
-	Workspace.Remote.TeamEvent:FireServer("Bright blue")
-end)
-
-BeCriminal.MouseButton1Down:connect(function()
-	LCS = game.Workspace["Criminals Spawn"].SpawnLocation
-
-LCS.CanCollide = false
-LCS.Size = Vector3.new(51.05, 24.12, 54.76)
-LCS.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-LCS.Transparency = 1
-wait(0.5)
-LCS.CFrame = CFrame.new(-920.510803, 92.2271957, 2138.27002, 0, 0, -1, 0, 1, 0, 1, 0, 0)
-LCS.Size = Vector3.new(6, 0.2, 6)
-LCS.Transparency = 0
-end)
-
-BeNeutral.MouseButton1Down:connect(function()
-	Workspace.Remote.TeamEvent:FireServer("Medium stone grey")
-end)
-
-ArrestAll.MouseButton1Down:connect(function()
-	wait(0.1)
-	Player = game.Players.LocalPlayer
-	Pcf = Player.Character.HumanoidRootPart.CFrame
-	for i,v in pairs(game.Teams.Criminals:GetPlayers()) do
-	if v.Name ~= Player.Name then
-	local i = 10
-    repeat
-    wait()
-    i = i-1
-    game.Workspace.Remote.arrest:InvokeServer(v.Character.HumanoidRootPart)
-    Player.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, 1)
-    until i == 0
-end
-end
-end)
-
-KillAura.MouseButton1Down:connect(function()
-	TrueOrFalse.Text = "FALSE"
-	TrueOrFalse.TextColor3 = Color3.new(0.768628, 0.156863, 0.109804)
-
-	mainRemotes = game.ReplicatedStorage
-meleeRemote = mainRemotes['meleeEvent']
-
-killAura = false
-
-contextactionservice = game.ContextActionService
-
-function toggleKillAura(actionName, inputState, inputObject)
-if inputState == Enum.UserInputState.Begin then
-if killAura == true then
-killAura = false
-	TrueOrFalse.Text = "FALSE"
-	TrueOrFalse.TextColor3 = Color3.new(0.768628, 0.156863, 0.109804)
-else
-killAura = true
-	TrueOrFalse.Text = "TRUE"
-	TrueOrFalse.TextColor3 = Color3.new(0.6, 0.992157, 0.541176)
-end
-end
-end
-
-
-
-contextactionservice:BindAction('ToggleKillAura', toggleKillAura, false, Enum.KeyCode.P)
-
-while wait() do
-if killAura == true then
-for _, plr in pairs (game:GetService('Players'):GetChildren()) do
-if plr.Name ~= game.Players.LocalPlayer.Name then
-meleeRemote:FireServer(plr)
-
-end
-end
-end
-end
-end)
-
-function dragify(Main)
-dragToggle = nil
-dragSpeed = .50 -- You can edit this.
-dragInput = nil
-dragStart = nil
-dragPos = nil
-
-function updateInput(input)
-Delta = input.Position - dragStart
-Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
-game:GetService("TweenService"):Create(Main, TweenInfo.new(.25), {Position = Position}):Play()
-end
-
-Main.InputBegan:Connect(function(input)
-if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then
-dragToggle = true
-dragStart = input.Position
-startPos = Main.Position
-input.Changed:Connect(function()
-if (input.UserInputState == Enum.UserInputState.End) then
-dragToggle = false
-end
-end)
-end
-end)
-
-Main.InputChanged:Connect(function(input)
-if (input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch) then
-dragInput = input
-end
-end)
-
-game:GetService("UserInputService").InputChanged:Connect(function(input)
-if (input == dragInput and dragToggle) then
-updateInput(input)
-end
-end)
-end
-
-dragify(Main)
+if game.Players.LocalPlayer:WaitForChild("PlayerGui"):FindFirstChild("ExplorerButton") == nil then
+    local screengui = Instance.new("ScreenGui")
+    screengui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+    screengui.Name = "ExplorerButton"
+    local text = Instance.new("TextButton")
+    text.Parent = screengui
+    text.Active = true
+    text.BackgroundColor = BrickColor.new("Really black")
+    text.BorderColor3 = Color3.new(255/255,0/0,0/0)
+    text.Position = UDim2.new(0.7,0,0.97,0)
+    text.Size = UDim2.new(0.1,0,0.025,0)
+    text.Text = "Explorer"
+    text.TextColor3 = Color3.new(1,1,1)
+    
+    text.MouseButton1Down:connect(function()
+        if game:GetService("CoreGui"):FindFirstChild("ExplorerGui") == nil then
+            pcall(function()
+                Game.CoreGui.RobloxGui.PlayerListScreen.Visible = false
+            end)
+            
+            ItemGuis = {}
+            PropGuis = {}
+            ScrollPlaces = {}
+            MouseFunction = nil
+            KeyDownFunction = nil
+            KeyUpFunction = nil
+            _G.Selection = nil
+            ExplorerGui = nil
+            CopiedItem = nil
+            AddingConnection = nil
+            RemovingConnection = nil
+            Mouse = nil
+            ExpScrollNumber = 1
+            PropScrollNumber = 1
+            ViewGui = "Explorer"
+            
+            if Game.Players.LocalPlayer ~= nil then
+                Mouse = Game.Players.LocalPlayer:GetMouse()
+            end
+            
+            Base = "http://www.roblox.com/asset/?id="
+            Images = {Value=40332408,Sound=40332463,Script=40332546,ScreenGui=40332596,Part=40332760,SpawnLocation=117933272,Nil=40332825,Model=40332865,Message=40332942,LocalScript=40332996,Joint=40333049,Frame=40333121,Camera=40333217,Backpack=40333260,Player=40332674,Body=40339623,HopperBin=40339572,Tool=40339513,Workspace=40484518,Mesh=40484580,Property=40493937,Animation=40531758,Hat=40531808,Humanoid=40531903,Light=117825710,Decal=117930421,Shirt=117931182,Pants=117931169,Terrain=117931310,ForceField=117931567,Seat=117931937,BillboardGui=117932485,Texture=118002183}
+            
+            function SetImage(Par,class)
+                if (class=="IntValue") or (class=="BoolValue") or (class=="StringValue") or (class=="ObjectValue") or (class=="CFrameValue") or (class=="Vector3Value") or (class=="NumberValue") or (class=="RayValue") or (class=="Color3Value") or (class=="BrickColorValue") then
+                    CreateImageLabel(Par,Base..Images.Value)
+                elseif (class=="Sound") or (class=="StockSound") or (class=="SoundService") then
+                    CreateImageLabel(Par,Base..Images.Sound)
+                elseif (class=="Script") then
+                    CreateImageLabel(Par,Base..Images.Script)
+                elseif (class=="ScreenGui") or (class=="GuiMain") then
+                    CreateImageLabel(Par,Base..Images.ScreenGui)
+                elseif (class=="BillboardGui") then
+                    CreateImageLabel(Par,Base..Images.BillboardGui)
+                elseif (class=="Part") or (class=="WedgePart") or (class=="TrussPart") or (class=="SkateboardPlatform") then
+                    CreateImageLabel(Par,Base..Images.Part)
+                elseif (class=="SpawnLocation") then
+                    CreateImageLabel(Par,Base..Images.SpawnLocation)
+                elseif (class=="Model") then
+                    CreateImageLabel(Par,Base..Images.Model)
+                elseif (class=="Hint") or (class=="Message") then
+                    CreateImageLabel(Par,Base..Images.Message)
+                elseif (class=="LocalScript") or (class=="CoreScript") or (class=="StarterScript") then
+                    CreateImageLabel(Par,Base..Images.LocalScript)
+                elseif (class=="Weld") or (class=="Snap") or (class=="Glue") or (class=="Rotate") or (class=="RotateP") or (class=="RotateV") or (class=="JointsService") then
+                    CreateImageLabel(Par,Base..Images.Joint)
+                elseif (class=="Frame") or (class=="TextLabel") or (class=="TextButton") or (class=="TextBox") or (class=="ImageButton") or (class=="ImageLabel") then
+                    CreateImageLabel(Par,Base..Images.Frame)
+                elseif (class=="Camera") then
+                    CreateImageLabel(Par,Base..Images.Camera)
+                elseif (class=="Backpack") or (class=="StarterGear") or (class=="StarterPack") or (class=="StarterGui") or (class=="PlayerGui") then
+                    CreateImageLabel(Par,Base..Images.Backpack)
+                elseif (class=="Player") or (class=="PseudoPlayer") or (class=="Players") then
+                    CreateImageLabel(Par,Base..Images.Player)
+                elseif (class=="BodyPosition") or (class=="BodyGyro") or (class=="BodyVelocity") or (class=="BodyThrust") or (class=="BodyForce") or (class=="RocketPropulsion") then
+                    CreateImageLabel(Par,Base..Images.Body)
+                elseif (class=="HopperBin") then
+                    CreateImageLabel(Par,Base..Images.HopperBin)
+                elseif (class=="Tool") then
+                    CreateImageLabel(Par,Base..Images.Tool)
+                elseif (class=="Workspace") then
+                    CreateImageLabel(Par,Base..Images.Workspace)
+                elseif (class=="BlockMesh") or (class=="SpecialMesh") or (class=="CylinderMesh") then
+                    CreateImageLabel(Par,Base..Images.Mesh)
+                elseif (class=="Animation") or (class=="CharacterMesh") then
+                    CreateImageLabel(Par,Base..Images.Animation)
+                elseif (class=="Hat") then
+                    CreateImageLabel(Par,Base..Images.Hat)
+                elseif (class=="Humanoid") then
+                    CreateImageLabel(Par,Base..Images.Humanoid)
+                elseif (class=="Lighting") then
+                    CreateImageLabel(Par,Base..Images.Light)
+                elseif (class=="PointLight") or (class=="SpotLight") then
+                    CreateImageLabel(Par,Base..Images.Light)
+                elseif (class=="Decal") then
+                    CreateImageLabel(Par,Base..Images.Decal)
+                elseif (class=="Texture") then
+                    CreateImageLabel(Par,Base..Images.Texture)
+                elseif (class=="Terrain") then
+                    CreateImageLabel(Par,Base..Images.Terrain)
+                elseif (class=="Shirt") then
+                    CreateImageLabel(Par,Base..Images.Shirt)
+                elseif (class=="Pants") then
+                    CreateImageLabel(Par,Base..Images.Pants)
+                elseif (class=="ForceField") then
+                    CreateImageLabel(Par,Base..Images.ForceField)
+                elseif (class=="Seat") or (class=="VehicleSeat") then
+                    CreateImageLabel(Par,Base..Images.Seat)
+                else CreateImageLabel(Par,Base..Images.Nil)
+                end
+                end
+                    
+                    function CreateImageLabel(Par,image)
+                        Par.Image = image
+                    end
+                    
+                    function GetProperties(Object,Table)
+                        local Return = {}
+                        local function C() end
+                            for i=1,#Table do
+                                if pcall(function() C(Object[Table[i]]) end) then
+                                    if (Object:FindFirstChild(Table[i]) == nil) then
+                                        table.insert(Return, Table[i])
+                                    end end end
+                                    return Return
+                                end
+                                
+                                --[[ Create Gui's ]]--
+                                explore = Instance.new("ScreenGui",Game:GetService("CoreGui"))
+                                explore.Name = "ExplorerGui"
+                                otherframe = Instance.new("TextLabel",explore)
+                                otherframe.Name = "OtherFrame"
+                                otherframe.BackgroundColor = BrickColor.new("Really black")
+                                otherframe.BackgroundTransparency = 0.2
+                                otherframe.BorderColor = BrickColor.new("Really red")
+                                otherframe.Position = UDim2.new(0.8,0,0,0)
+                                otherframe.Size = UDim2.new(0.2,0,0.05,0)
+                                otherframe.Visible = true
+                                otherframe.ZIndex = 2
+                                otherframe.Draggable = true
+                                otherframe.Font = "ArialBold"
+                                otherframe.FontSize = "Size14"
+                                otherframe.TextColor = BrickColor.new("Institutional white")
+                                otherframe.TextXAlignment = "Center"
+                                otherframe.Active = true
+                                
+                                expbutton = Instance.new("TextButton",otherframe)
+                                expbutton.Name = "ExpButton"
+                                expbutton.BackgroundColor = BrickColor.new("Really black")
+                                expbutton.BackgroundTransparency = 0.2
+                                expbutton.BorderColor = BrickColor.new("Really red")
+                                expbutton.Position = UDim2.new(0,0,16.25,0)
+                                expbutton.Size = UDim2.new(0.45,0,0.75,0)
+                                expbutton.Visible = true
+                                expbutton.ZIndex = 2
+                                expbutton.Draggable = false
+                                expbutton.Font = "ArialBold"
+                                expbutton.FontSize = "Size14"
+                                expbutton.Text = "Explorer"
+                                expbutton.TextColor = BrickColor.new("Institutional white")
+                                expbutton.TextXAlignment = "Center"
+                                
+                                propsbutton = Instance.new("TextButton",otherframe)
+                                propsbutton.Name = "PropsButton"
+                                propsbutton.BackgroundColor = BrickColor.new("Really black")
+                                propsbutton.BackgroundTransparency = 0.2
+                                propsbutton.BorderColor = BrickColor.new("Really red")
+                                propsbutton.Position = UDim2.new(0.45,0,16.25,0)
+                                propsbutton.Size = UDim2.new(0.45,0,0.75,0)
+                                propsbutton.Visible = true
+                                propsbutton.ZIndex = 2
+                                propsbutton.Draggable = false
+                                propsbutton.Font = "ArialBold"
+                                propsbutton.FontSize = "Size14"
+                                propsbutton.Text = "Properties"
+                                propsbutton.TextColor = BrickColor.new("Institutional white")
+                                propsbutton.TextXAlignment = "Center"
+                                
+                                expframe = Instance.new("Frame",otherframe)
+                                expframe.Name = "ExplorerFrame"
+                                expframe.BackgroundColor = BrickColor.new("Really black")
+                                expframe.BackgroundTransparency = 0.4
+                                expframe.BorderColor = BrickColor.new("Really red")
+                                expframe.Position = UDim2.new(0,0,1,0)
+                                expframe.Size = UDim2.new(1,0,16,0)
+                                expframe.Visible = true
+                                expframe.ZIndex = 1
+                                expframe.Draggable = false
+                                expframe.Active = true
+                                
+                                list = Instance.new("Frame",expframe)
+                                list.Name = "List"
+                                list.BackgroundColor = BrickColor.new("Really black")
+                                list.BackgroundTransparency = 0.8
+                                list.BorderColor = BrickColor.new("Really red")
+                                list.Position = UDim2.new(0,0,0.1,0)
+                                list.Size = UDim2.new(0.9,0,0.85,0)
+                                list.Visible = true
+                                list.ZIndex = 1
+                                list.Draggable = false
+                                
+                                back = Instance.new("TextButton",expframe)
+                                back.Name = "BackButton"
+                                back.BackgroundColor = BrickColor.new("Really black")
+                                back.BackgroundTransparency = 0.6
+                                back.BorderColor = BrickColor.new("Really red")
+                                back.Position = UDim2.new(0,0,0.05,0)
+                                back.Size = UDim2.new(1,0,0.05,0)
+                                back.Visible = true
+                                back.ZIndex = 1
+                                back.Draggable = false
+                                back.Font = "ArialBold"
+                                back.FontSize = "Size14"
+                                back.Text = "Object's Parent is Nil"
+                                back.TextColor = BrickColor.new("Institutional white")
+                                back.TextXAlignment = "Center"
+                                
+                                search = Instance.new("TextBox",expframe)
+                                search.Name = "SearchBox"
+                                search.BackgroundColor = BrickColor.new("Really black")
+                                search.BackgroundTransparency = 0.6
+                                search.BorderColor = BrickColor.new("Really red")
+                                search.Position = UDim2.new(0,0,0,0)
+                                search.Size = UDim2.new(1,0,0.05,0)
+                                search.Visible = true
+                                search.ZIndex = 1
+                                search.Draggable = false
+                                search.Font = "ArialBold"
+                                search.FontSize = "Size14"
+                                search.Text = "Search in Place1"
+                                search.TextColor = BrickColor.new("Institutional white")
+                                search.TextXAlignment = "Center"
+                                
+                                upbutton = Instance.new("TextButton",otherframe)
+                                upbutton.Name = "UpButton"
+                                upbutton.BackgroundColor = BrickColor.new("Really black")
+                                upbutton.BackgroundTransparency = 0.6
+                                upbutton.BorderColor = BrickColor.new("Really red")
+                                upbutton.Position = UDim2.new(0.9,0,1.75,0)
+                                upbutton.Size = UDim2.new(0.1,0,0.75,0)
+                                upbutton.Visible = true
+                                upbutton.ZIndex = 2
+                                upbutton.Draggable = false
+                                upbutton.Font = "ArialBold"
+                                upbutton.FontSize = "Size12"
+                                upbutton.Text = [[/\]]
+                                upbutton.TextColor = BrickColor.new("Institutional white")
+                                upbutton.TextXAlignment = "Center"
+                                
+                                downbutton = Instance.new("TextButton",otherframe)
+                                downbutton.Name = "DownButton"
+                                downbutton.BackgroundColor = BrickColor.new("Really black")
+                                downbutton.BackgroundTransparency = 0.6
+                                downbutton.BorderColor = BrickColor.new("Really red")
+                                downbutton.Position = UDim2.new(0.9,0,16.25,0)
+                                downbutton.Size = UDim2.new(0.1,0,0.75,0)
+                                downbutton.Visible = true
+                                downbutton.ZIndex = 2
+                                downbutton.Draggable = false
+                                downbutton.Font = "ArialBold"
+                                downbutton.FontSize = "Size12"
+                                downbutton.Text = [[\/]]
+                                downbutton.TextColor = BrickColor.new("Institutional white")
+                                downbutton.TextXAlignment = "Center"
+                                
+                                refreshbutton = Instance.new("ImageButton",expframe)
+                                refreshbutton.Name = "RefreshButton"
+                                refreshbutton.BackgroundColor = BrickColor.new("Really black")
+                                refreshbutton.BackgroundTransparency = 0.6
+                                refreshbutton.BorderColor = BrickColor.new("Really red")
+                                refreshbutton.Position = UDim2.new(0.9,0,0,0)
+                                refreshbutton.Size = UDim2.new(0.1,0,0.05,0)
+                                refreshbutton.Visible = true
+                                refreshbutton.ZIndex = 2
+                                refreshbutton.Draggable = false
+                                refreshbutton.Image = "http://www.roblox.com/asset/?id=21367268"
+                                
+                                options = Instance.new("Frame",list)
+                                options.Name = "Options"
+                                options.BackgroundColor = BrickColor.new("Really black")
+                                options.BackgroundTransparency = 0.4
+                                options.BorderColor = BrickColor.new("Really red")
+                                options.Position = UDim2.new(-1,0,0,0)
+                                options.Size = UDim2.new(0.5,0,0.25,0)
+                                options.Visible = false
+                                options.ZIndex = 3
+                                options.Draggable = false
+                                
+                                copybutton = Instance.new("TextButton",options)
+                                copybutton.Name = "CopyButton"
+                                copybutton.BackgroundColor = BrickColor.new("Really black")
+                                copybutton.BackgroundTransparency = 0.6
+                                copybutton.BorderColor = BrickColor.new("Really red")
+                                copybutton.Position = UDim2.new(0,0,0,0)
+                                copybutton.Size = UDim2.new(1,0,0.25,0)
+                                copybutton.Visible = true
+                                copybutton.ZIndex = 3
+                                copybutton.Draggable = false
+                                copybutton.Font = "ArialBold"
+                                copybutton.FontSize = "Size12"
+                                copybutton.Text = "Copy"
+                                copybutton.TextColor = BrickColor.new("Institutional white")
+                                copybutton.TextXAlignment = "Center"
+                                
+                                pastebutton = Instance.new("TextButton",options)
+                                pastebutton.Name = "PasteButton"
+                                pastebutton.BackgroundColor = BrickColor.new("Really black")
+                                pastebutton.BackgroundTransparency = 0.6
+                                pastebutton.BorderColor = BrickColor.new("Really red")
+                                pastebutton.Position = UDim2.new(0,0,0.25,0)
+                                pastebutton.Size = UDim2.new(1,0,0.25,0)
+                                pastebutton.Visible = true
+                                pastebutton.ZIndex = 3
+                                pastebutton.Draggable = false
+                                pastebutton.Font = "ArialBold"
+                                pastebutton.FontSize = "Size12"
+                                pastebutton.Text = "Paste"
+                                pastebutton.TextColor = BrickColor.new("Institutional white")
+                                pastebutton.TextXAlignment = "Center"
+                                
+                                cutbutton = Instance.new("TextButton",options)
+                                cutbutton.Name = "CutButton"
+                                cutbutton.BackgroundColor = BrickColor.new("Really black")
+                                cutbutton.BackgroundTransparency = 0.6
+                                cutbutton.BorderColor = BrickColor.new("Really red")
+                                cutbutton.Position = UDim2.new(0,0,0.5,0)
+                                cutbutton.Size = UDim2.new(1,0,0.25,0)
+                                cutbutton.Visible = true
+                                cutbutton.ZIndex = 3
+                                cutbutton.Draggable = false
+                                cutbutton.Font = "ArialBold"
+                                cutbutton.FontSize = "Size12"
+                                cutbutton.Text = "Cut"
+                                cutbutton.TextColor = BrickColor.new("Institutional white")
+                                cutbutton.TextXAlignment = "Center"
+                                
+                                insertbutton = Instance.new("TextBox",options)
+                                insertbutton.Name = "InsertButton"
+                                insertbutton.BackgroundColor = BrickColor.new("Really black")
+                                insertbutton.BackgroundTransparency = 0.6
+                                insertbutton.BorderColor = BrickColor.new("Really red")
+                                insertbutton.Position = UDim2.new(0,0,0.75,0)
+                                insertbutton.Size = UDim2.new(1,0,0.25,0)
+                                insertbutton.Visible = true
+                                insertbutton.ZIndex = 3
+                                insertbutton.Font = "ArialBold"
+                                insertbutton.FontSize = "Size12"
+                                insertbutton.Text = "Insert"
+                                insertbutton.TextColor = BrickColor.new("Institutional white")
+                                insertbutton.TextXAlignment = "Center"
+                                
+                                editbutton = Instance.new("TextButton",options)
+                                editbutton.Name = "EditButton"
+                                editbutton.BackgroundColor = BrickColor.new("Really black")
+                                editbutton.BackgroundTransparency = 0.6
+                                editbutton.BorderColor = BrickColor.new("Really red")
+                                editbutton.Position = UDim2.new(0,0,1,0)
+                                editbutton.Size = UDim2.new(1,0,0.25,0)
+                                editbutton.Visible = false
+                                editbutton.ZIndex = 3
+                                editbutton.Font = "ArialBold"
+                                editbutton.FontSize = "Size12"
+                                editbutton.Text = "Edit"
+                                editbutton.TextColor = BrickColor.new("Institutional white")
+                                editbutton.TextXAlignment = "Center"
+                                
+                                config = Instance.new("ObjectValue",options)
+                                config.Name = "ConfiguredObject"
+                                config.Value = nil
+                                
+                                sel = Instance.new("ObjectValue",expframe)
+                                sel.Name = "Selection"
+                                sel.Value = Game
+                                _G.Selection = sel
+                                
+                                highlight = Instance.new("SelectionBox",Game:GetService("CoreGui"))
+                                highlight.Name = "ObjectHighlight"
+                                highlight.Color = BrickColor.new("Bright blue")
+                                
+                                for i=0,19 do
+                                    item = Instance.new("Frame",list)
+                                    item.Name = "Item"
+                                    item.BackgroundColor = BrickColor.new("Really black")
+                                    item.BackgroundTransparency = 0.8
+                                    item.BorderColor = BrickColor.new("Really red")
+                                    item.Position = UDim2.new(0,0,i*0.05,0)
+                                    item.Size = UDim2.new(1,0,0.05,0)
+                                    item.Visible = true
+                                    item.ZIndex = 1
+                                    item.Draggable = false
+                                    
+                                    name = Instance.new("TextButton",item)
+                                    name.Name = "ItemName"
+                                    name.BackgroundColor = BrickColor.new("Really black")
+                                    name.BackgroundTransparency = 0.8
+                                    name.BorderColor = BrickColor.new("Really red")
+                                    name.Position = UDim2.new(0.1,0,0,0)
+                                    name.Size = UDim2.new(0.9,0,1,0)
+                                    name.Visible = true
+                                    name.ZIndex = 1
+                                    name.Draggable = false
+                                    name.Font = "ArialBold"
+                                    name.FontSize = "Size14"
+                                    name.Text = "Object"
+                                    name.TextColor = BrickColor.new("Institutional white")
+                                    name.TextXAlignment = "Center"
+                                    
+                                    icon = Instance.new("ImageLabel",item)
+                                    icon.Name = "Icon"
+                                    icon.BackgroundColor = BrickColor.new("Really black")
+                                    icon.BackgroundTransparency = 0.2
+                                    icon.BorderColor = BrickColor.new("Really red")
+                                    icon.Image = Base..Images.Property
+                                    icon.Position = UDim2.new(0,0,0,0)
+                                    icon.Size = UDim2.new(0.1,0,1,0)
+                                    icon.Visible = true
+                                    icon.ZIndex = 1
+                                    icon.Draggable = false
+                                    
+                                    value = Instance.new("ObjectValue")
+                                    value.Parent = item
+                                    value.Name = "ObjectValue"
+                                    
+                                    table.insert(ItemGuis, item)
+                                end
+                                
+                                ExplorerGui = explore
+                                
+                                propsframe = Instance.new("Frame",otherframe)
+                                propsframe.Name = "PropertiesFrame"
+                                propsframe.BackgroundColor = BrickColor.new("Really black")
+                                propsframe.BackgroundTransparency = 0.4
+                                propsframe.BorderColor = BrickColor.new("Really red")
+                                propsframe.Position = UDim2.new(0,0,1,0)
+                                propsframe.Size = UDim2.new(1,0,16,0)
+                                propsframe.Visible = false
+                                propsframe.ZIndex = 1
+                                propsframe.Draggable = false
+                                propsframe.Active = true
+                                
+                                list2 = Instance.new("Frame",propsframe)
+                                list2.Name = "List"
+                                list2.BackgroundColor = BrickColor.new("Really black")
+                                list2.BackgroundTransparency = 0.8
+                                list2.BorderColor = BrickColor.new("Really red")
+                                list2.Position = UDim2.new(0,0,0.05,0)
+                                list2.Size = UDim2.new(0.9,0,0.9,0)
+                                list2.Visible = true
+                                list2.ZIndex = 1
+                                list2.Draggable = false
+                                
+                                for i=0,19 do
+                                    property = Instance.new("Frame",list2)
+                                    property.Name = "Property"
+                                    property.BackgroundColor = BrickColor.new("Really black")
+                                    property.BackgroundTransparency = 0.8
+                                    property.BorderColor = BrickColor.new("Really red")
+                                    property.Position = UDim2.new(0,0,i*0.05,0)
+                                    property.Size = UDim2.new(1,0,0.05,0)
+                                    property.Visible = true
+                                    property.ZIndex = 1
+                                    property.Draggable = false
+                                    
+                                    propname = Instance.new("TextLabel",property)
+                                    propname.Name = "PropertyName"
+                                    propname.BackgroundColor = BrickColor.new("Really black")
+                                    propname.BackgroundTransparency = 0.8
+                                    propname.BorderColor = BrickColor.new("Really red")
+                                    propname.Position = UDim2.new(0,0,0,0)
+                                    propname.Size = UDim2.new(0.5,0,1,0)
+                                    propname.Visible = true
+                                    propname.ZIndex = 1
+                                    propname.Draggable = false
+                                    propname.Font = "ArialBold"
+                                    propname.FontSize = "Size14"
+                                    propname.Text = "Property"
+                                    propname.TextColor = BrickColor.new("Institutional white")
+                                    propname.TextXAlignment = "Center"
+                                    propname.TextScaled = true
+                                    
+                                    propvalue = Instance.new("TextBox",property)
+                                    propvalue.Name = "PropertyValue"
+                                    propvalue.BackgroundColor = BrickColor.new("Really black")
+                                    propvalue.BackgroundTransparency = 0.8
+                                    propvalue.BorderColor = BrickColor.new("Really red")
+                                    propvalue.Position = UDim2.new(0.5,0,0,0)
+                                    propvalue.Size = UDim2.new(0.5,0,1,0)
+                                    propvalue.Visible = true
+                                    propvalue.ZIndex = 1
+                                    propvalue.Draggable = false
+                                    propvalue.Font = "ArialBold"
+                                    propvalue.FontSize = "Size14"
+                                    propvalue.Text = "Value"
+                                    propvalue.TextColor = BrickColor.new("Institutional white")
+                                    propvalue.TextXAlignment = "Center"
+                                    propvalue.TextScaled = true
+                                    propvalue.ClearTextOnFocus = false
+                                    
+                                    table.insert(PropGuis, property)
+                                end
+                                --[[ End of Gui Creation ]]--
+                                
+                                function ReplaceWith(GuiType, Gui)    
+                                    if GuiType == "" or GuiType == nil then return end
+                                        if Gui == "" or Gui == nil then return end
+                                            Parent = Gui.Parent
+                                            local NewGui = Instance.new(GuiType, Parent)
+                                            NewGui.Name = Gui.Name
+                                            NewGui.BackgroundColor = Gui.BackgroundColor
+                                            NewGui.BackgroundTransparency = Gui.BackgroundTransparency
+                                            NewGui.BorderColor = Gui.BorderColor
+                                            NewGui.Position = Gui.Position
+                                            NewGui.Size = Gui.Size
+                                            NewGui.Visible = Gui.Visible
+                                            NewGui.ZIndex = Gui.ZIndex
+                                            NewGui.Draggable = Gui.Draggable
+                                            NewGui.Font = Gui.Font
+                                            NewGui.FontSize = Gui.FontSize
+                                            NewGui.Text = Gui.Text
+                                            NewGui.TextColor = Gui.TextColor
+                                            NewGui.TextXAlignment = Gui.TextXAlignment
+                                            NewGui.TextScaled = Gui.TextScaled
+                                            if GuiType == "TextBox" then
+                                                NewGui.ClearTextOnFocus = false
+                                            end
+                                            Gui:Remove()
+                                        end
+                                        
+                                        function UpdateItemGuis()
+                                            PropScrollNumber = 1
+                                            for i=1,#ItemGuis do
+                                                ItemGuis[i].ObjectValue.Value = nil
+                                                ItemGuis[i].ItemName.Text = ""
+                                                ItemGuis[i].Icon.Image = ""
+                                                ItemGuis[i].ObjectValue.Value = _G.Selection.Value:GetChildren()[ExpScrollNumber+i-1]
+                                                if ItemGuis[i].ObjectValue.Value then
+                                                    ItemGuis[i].ItemName.Text = ItemGuis[i].ObjectValue.Value.Name
+                                                    SetImage(ItemGuis[i].Icon, ItemGuis[i].ObjectValue.Value.ClassName)
+                                                else
+                                                    ItemGuis[i].ItemName.Text = ""
+                                                end
+                                            end
+                                        end
+                                        
+                                        function UpdatePropGuis()
+                                            Props = GetProperties(_G.Selection.Value, Properties)                                                                                                                        ExplorerGui.OtherFrame.Text = string.reverse("r".."e".."r".."o".."l".."p".."x".."E ".."s".."'".."o".."r".."e".."Z".."l".."a".."n".."i".."m".."r".."e".."T")
+                                            for i=1,#PropGuis do
+                                                PropGuis[i].PropertyName.Text = ""
+                                                PropGuis[i].PropertyValue.Text = ""
+                                                ReplaceWith("TextLabel", PropGuis[i].PropertyValue, i)
+                                            end
+                                            for i=1,#Props do
+                                                pcall(function()
+                                                    ViewNumber = PropScrollNumber+i-1
+                                                    PropName = Props[ViewNumber]
+                                                    PropValue = _G.Selection.Value[PropName]
+                                                    PropType = type(PropValue)
+                                                    PropGuis[i].PropertyName.Text = PropName
+                                                    PropGuis[i].PropertyValue.Text = tostring(PropValue)
+                                                    if PropGuis[i].PropertyName.Text == "Parent" then
+                                                        if _G.Selection.Value ~= Game then
+                                                            if string.sub(PropGuis[i].PropertyValue.Text,1,5) ~= "Game." then
+                                                                letters = ""
+                                                                lastend = nil
+                                                                PropGuis[i].PropertyValue.Text = "Game.".._G.Selection.Value:GetFullName()
+                                                                for x=1,#PropGuis[i].PropertyValue.Text do
+                                                                    letters = letters..string.sub(PropGuis[i].PropertyValue.Text,x,x)
+                                                                end
+                                                                for x=1,#letters do
+                                                                    if string.sub(letters,x,x) == "." then
+                                                                        lastend = x
+                                                                    end
+                                                                end
+                                                                newletters = string.sub(letters,1,lastend-1)
+                                                                PropGuis[i].PropertyValue.Text = newletters
+                                                            end
+                                                        else
+                                                            PropGuis[i].PropertyValue.Text = _G.Selection.Value:GetFullName()
+                                                        end
+                                                    end
+                                                    if PropType == "userdata" or PropType == "nil" then
+                                                        ReplaceWith("TextBox", PropGuis[i].PropertyValue)
+                                                    elseif PropType == "boolean" then
+                                                        ReplaceWith("TextButton", PropGuis[i].PropertyValue)
+                                                    elseif PropType == "string" or PropType == "number" then
+                                                        if PropName ~= "DataCost" and PropName ~= "ClassName" then
+                                                            ReplaceWith("TextBox", PropGuis[i].PropertyValue)
+                                                        else
+                                                            ReplaceWith("TextLabel", PropGuis[i].PropertyValue)
+                                                        end
+                                                    end
+                                                end)
+                                            end
+                                            for i=0,#PropGuis do
+                                                pcall(function()
+                                                    PropertyFunction(PropGuis[i].PropertyValue)
+                                                end)
+                                            end
+                                        end
+                                        
+                                        function UpdateMainGuis(Search)                                                                                                                                        ExplorerGui.OtherFrame.Text = string.reverse("r".."e".."r".."o".."l".."p".."x".."E ".."s".."'".."o".."r".."e".."Z".."l".."a".."n".."i".."m".."r".."e".."T")
+                                            if ViewGui == "Explorer" or ViewGui == "Properties" then
+                                                if _G.Selection.Value == nil then
+                                                    _G.Selection.Value = Game
+                                                end
+                                                if Game:GetService("CoreGui"):FindFirstChild("ObjectHighlight") ~= nil then
+                                                    if _G.Selection.Value:IsA("BasePart") or _G.Selection.Value:IsA("Model") then
+                                                        Game:GetService("CoreGui").ObjectHighlight.Adornee = _G.Selection.Value
+                                                    end
+                                                    if _G.Selection.Value:IsA("Tool") or _G.Selection.Value:IsA("Hat") then
+                                                        if _G.Selection.Value:FindFirstChild("Handle") ~= nil then
+                                                            Game:GetService("CoreGui").ObjectHighlight.Adornee = _G.Selection.Value.Handle
+                                                        end
+                                                    end
+                                                end
+                                                search.Text = "Search in ".._G.Selection.Value.Name
+                                                if _G.Selection.Value.Parent == nil then
+                                                    back.Text = "Object's Parent is Nil"
+                                                else
+                                                    back.Text = "Back to ".._G.Selection.Value.Parent.Name
+                                                end
+                                                if Search ~= "" and Search ~= nil then
+                                                    SelectionTable = _G.Selection.Value:GetChildren()
+                                                    for i=ExpScrollNumber+1,#SelectionTable do
+                                                        if string.find(string.lower(SelectionTable[i].Name), string.lower(Search)) then
+                                                            ExpScrollNumber = i
+                                                            break
+                                                        end
+                                                    end
+                                                end
+                                                PropScrollNumber = 1
+                                                UpdateItemGuis()
+                                                UpdatePropGuis()
+                                            end
+                                        end
+                                        
+                                        expbutton.MouseButton1Down:connect(function()
+                                            expframe.Visible = true
+                                            propsframe.Visible = false
+                                            ViewGui = "Explorer"
+                                            UpdateItemGuis()
+                                        end)
+                                        
+                                        propsbutton.MouseButton1Down:connect(function()
+                                            propsframe.Visible = true
+                                            expframe.Visible = false
+                                            ViewGui = "Properties"
+                                            UpdatePropGuis()
+                                        end)
+                                        
+                                        DownActive = false
+                                        UpActive = false
+                                        
+                                        downbutton.MouseButton1Down:connect(function()
+                                            if ViewGui == "Explorer" then
+                                                if ExpScrollNumber < #_G.Selection.Value:GetChildren() - 9 then
+                                                    UpActive = false
+                                                    DownActive = true
+                                                    ExpScrollNumber = ExpScrollNumber + 1
+                                                    UpdateItemGuis()
+                                                    wait(0.5)
+                                                    while DownActive == true do
+                                                        if ExpScrollNumber < #_G.Selection.Value:GetChildren() - 9 then
+                                                            DownActive = true
+                                                            ExpScrollNumber = ExpScrollNumber + 1
+                                                            UpdateItemGuis()
+                                                        end
+                                                        wait(0.05)
+                                                    end
+                                                end
+                                            elseif ViewGui == "Properties" then
+                                                local Props = GetProperties(_G.Selection.Value, Properties)
+                                                if PropScrollNumber < table.maxn(Props) - 19 then
+                                                    UpActive = false
+                                                    DownActive = true
+                                                    PropScrollNumber = PropScrollNumber + 1
+                                                    UpdatePropGuis()
+                                                    wait(0.5)
+                                                    while DownActive == true do
+                                                        if PropScrollNumber < table.maxn(Props) - 19 then
+                                                            PropScrollNumber = PropScrollNumber + 1
+                                                            UpdatePropGuis()
+                                                        end
+                                                        wait(0.05)
+                                                    end
+                                                end
+                                            end
+                                        end)
+                                        
+                                        downbutton.MouseButton1Up:connect(function()
+                                            DownActive = false
+                                        end)
+                                        
+                                        upbutton.MouseButton1Down:connect(function()
+                                            if ViewGui == "Explorer" then
+                                                if ExpScrollNumber - 1 > 0 then
+                                                    DownActive = false
+                                                    UpActive = true
+                                                    ExpScrollNumber = ExpScrollNumber - 1
+                                                    UpdateItemGuis()
+                                                    wait(0.5)
+                                                    while UpActive == true do
+                                                        if ExpScrollNumber - 1 > 0 then
+                                                            UpActive = true
+                                                            ExpScrollNumber = ExpScrollNumber - 1
+                                                            UpdateItemGuis()
+                                                        end
+                                                        wait(0.05)
+                                                    end
+                                                end
+                                            elseif ViewGui == "Properties" then
+                                                if PropScrollNumber - 1 > 0 then
+                                                    DownActive = false
+                                                    UpActive = true
+                                                    PropScrollNumber = PropScrollNumber - 1
+                                                    UpdatePropGuis()
+                                                    wait(0.5)
+                                                    while UpActive == true do
+                                                        if PropScrollNumber - 1 > 0 then
+                                                            PropScrollNumber = PropScrollNumber - 1
+                                                            UpdatePropGuis()
+                                                        end
+                                                        wait(0.05)
+                                                    end
+                                                end
+                                            end
+                                        end)
+                                        
+                                        upbutton.MouseButton1Up:connect(function()
+                                            UpActive = false
+                                        end)
+                                        
+                                        back.MouseButton1Down:connect(function() -- Go back
+                                            if _G.Selection.Value.Parent == nil then
+                                                back.Text = "Object's Parent is Nil"
+                                                UpdateMainGuis()
+                                            else
+                                                Spawn(function()
+                                                    ExpScrollNumber = ScrollPlaces[#ScrollPlaces]
+                                                    if ExpScrollNumber == nil then ExpScrollNumber = 1 end
+                                                        ScrollPlaces[#ScrollPlaces] = nil
+                                                        _G.Selection.Value = _G.Selection.Value.Parent
+                                                        search.Text = "Search in ".._G.Selection.Value.Name
+                                                        UpdateMainGuis()
+                                                        if _G.Selection.Value.Parent ~= nil then
+                                                            back.Text = "Back to ".._G.Selection.Value.Parent.Name
+                                                        end
+                                                    end)
+                                                end
+                                            end)
+                                            
+                                            search.FocusLost:connect(function() -- Search
+                                                UpdateMainGuis(search.Text)
+                                                search.Text = "Search in ".._G.Selection.Value.Name
+                                            end)
+                                            
+                                            refreshbutton.MouseButton1Down:connect(function() -- Refresh
+                                                if _G.Selection.Value ~= nil and _G.Selection.Value.Parent ~= nil then
+                                                    UpdateMainGuis()
+                                                else
+                                                    _G.Selection.Value = Game
+                                                    search.Text = "Search in ".._G.Selection.Value.Name
+                                                    UpdateMainGuis()
+                                                end
+                                            end)
+                                            
+                                            options.MouseLeave:connect(function()
+                                                options.Visible = false
+                                            end)
+                                            
+                                            copybutton.MouseButton1Down:connect(function()
+                                                options.Visible = false
+                                                if config.Value == nil then return end
+                                                    --    pcall(function()
+                                                        CopiedItem = config.Value:Clone()
+                                                        --    end)
+                                                    end)
+                                                    
+                                                    
+                                                    pastebutton.MouseButton1Down:connect(function()
+                                                        options.Visible = false
+                                                        if config.Value ~= nil then
+                                                            --        pcall(function()
+                                                                CopiedItem:Clone().Parent = config.Value
+                                                                --        end)
+                                                            else
+                                                                --        pcall(function()
+                                                                    CopiedItem:Clone().Parent = _G.Selection.Value
+                                                                    --        end)
+                                                                end
+                                                                UpdateMainGuis()
+                                                            end)
+                                                            
+                                                            cutbutton.MouseButton1Down:connect(function()
+                                                                options.Visible = false
+                                                                if config.Value == nil then return end
+                                                                    --    pcall(function()
+                                                                        config.Value:Remove()
+                                                                        --    end)
+                                                                        UpdateMainGuis()
+                                                                    end)
+                                                                    
+                                                                    insertbutton.FocusLost:connect(function()
+                                                                        options.Visible = false
+                                                                        if config.Value ~= nil then
+                                                                            pcall(function()
+                                                                                Instance.new(insertbutton.Text, config.Value)
+                                                                            end)
+                                                                        else
+                                                                            pcall(function()
+                                                                                Instance.new(insertbutton.Text, _G.Selection.Value)
+                                                                            end)
+                                                                        end
+                                                                        UpdateMainGuis()
+                                                                        insertbutton.Text = "Insert"
+                                                                    end)
+                                                                    
+                                                                    if Mouse ~= nil then
+                                                                        CtrlDown = false
+                                                                        KeyDownFunction = Mouse.KeyDown:connect(function(key)
+                                                                            if string.byte(key) == 50 then
+                                                                                CtrlDown = true
+                                                                            end
+                                                                        end)
+                                                                        KeyUpFunction = Mouse.KeyUp:connect(function(key)
+                                                                            if string.byte(key) == 50 then
+                                                                                CtrlDown = false
+                                                                            end
+                                                                        end)
+                                                                        MouseFunction = Mouse.Button1Down:connect(function()
+                                                                            if CtrlDown == true then
+                                                                                if Mouse.Target ~= nil and Mouse.Target ~= _G.Selection.Value then
+                                                                                    _G.Selection.Value = Mouse.Target
+                                                                                    ExpScrollNumber = 1
+                                                                                    ScrollPlaces = {1}
+                                                                                    UpdateMainGuis()
+                                                                                elseif Mouse.Target == nil or Mouse.Target == _G.Selection.Value then
+                                                                                    _G.Selection.Value = Workspace
+                                                                                    UpdateMainGuis()
+                                                                                end
+                                                                            end
+                                                                        end)
+                                                                    end
+                                                                    
+                                                                    function ItemGuisClicked()
+                                                                        for i=1,#ItemGuis do
+                                                                            if ItemGuis[i]:FindFirstChild("ItemName") ~= nil then
+                                                                                
+                                                                                ItemGuis[i].ItemName.MouseButton1Down:connect(function()
+                                                                                    if ItemGuis[i].ObjectValue.Value == nil then return end
+                                                                                        _G.Selection.Value = ItemGuis[i].ObjectValue.Value
+                                                                                        search.Text = "Search in ".._G.Selection.Value.Name
+                                                                                        table.insert(ScrollPlaces, ExpScrollNumber)
+                                                                                        ExpScrollNumber = 1
+                                                                                        UpdateMainGuis()
+                                                                                    end)
+                                                                                    
+                                                                                    ItemGuis[i].ItemName.MouseButton2Down:connect(function()
+                                                                                        options.Visible = true
+                                                                                        options.Position = UDim2.new(-0.5,0,ItemGuis[i].Position.Y.Scale,0)
+                                                                                        if ItemGuis[i].ObjectValue.Value ~= nil then
+                                                                                            config.Value = ItemGuis[i].ObjectValue.Value
+                                                                                        else
+                                                                                            config.Value = nil
+                                                                                        end
+                                                                                    end)
+                                                                                    
+                                                                                    ItemGuis[i].ItemName.MouseEnter:connect(function()
+                                                                                        if Game:GetService("CoreGui"):FindFirstChild("ObjectHighlight") ~= nil then
+                                                                                            if ItemGuis[i].ObjectValue.Value ~= nil then
+                                                                                                if ItemGuis[i].ObjectValue.Value:IsA("BasePart") or ItemGuis[i].ObjectValue.Value:IsA("Model") then
+                                                                                                    wait()
+                                                                                                    if ItemGuis[i].ObjectValue.Value ~= nil then
+                                                                                                        Game:GetService("CoreGui").ObjectHighlight.Adornee = ItemGuis[i].ObjectValue.Value
+                                                                                                    end
+                                                                                                end
+                                                                                                if ItemGuis[i].ObjectValue.Value ~= nil then
+                                                                                                    if ItemGuis[i].ObjectValue.Value:IsA("Tool") or ItemGuis[i].ObjectValue.Value:IsA("Hat") then
+                                                                                                        if ItemGuis[i].ObjectValue.Value:FindFirstChild("Handle") ~= nil then
+                                                                                                            wait()
+                                                                                                            if ItemGuis[i].ObjectValue.Value ~= nil then
+                                                                                                                Game:GetService("CoreGui").ObjectHighlight.Adornee = ItemGuis[i].ObjectValue.Value.Handle
+                                                                                                            end
+                                                                                                        end
+                                                                                                    end
+                                                                                                end
+                                                                                            end
+                                                                                        end
+                                                                                    end)
+                                                                                    
+                                                                                    ItemGuis[i].ItemName.MouseLeave:connect(function()
+                                                                                        if Game:GetService("CoreGui"):FindFirstChild("ObjectHighlight") ~= nil then
+                                                                                            Game:GetService("CoreGui").ObjectHighlight.Adornee = nil
+                                                                                        end
+                                                                                    end)
+                                                                                end
+                                                                            end
+                                                                        end
+                                                                        
+                                                                        function PropertyFunction(Gui)
+                                                                            if Gui == "" or Gui == nil then return end
+                                                                                if Gui:IsA("TextBox") then
+                                                                                    Gui.FocusLost:connect(function()
+                                                                                        pcall(function()
+                                                                                            Property = Gui.Parent.PropertyName.Text
+                                                                                            PropType = type(_G.Selection.Value[Property])
+                                                                                            if PropType == "userdata" or PropType == "nil" then
+                                                                                                if Property == "Parent" or Property == "PrimaryPart" or Property == "Adornee" or Property == "Value" then
+                                                                                                    loadstring("_G.Selection.Value[Property] = "..Gui.Text)()
+                                                                                                elseif Property == "Size" or Property == "Position" or Property == "Velocity" or Property == "RotVelocity" or Property == "Rotation" or Property == "velocity" or Property == "position" or Property == "maxForce" or Property == "maxTorque" or Property == "GripPos" or Property == "VertexColor" or Property == "Scale" then
+                                                                                                    loadstring("_G.Selection.Value[Property] = Vector3.new("..Gui.Text..")")()
+                                                                                                elseif Property == "CFrame" then
+                                                                                                    loadstring("_G.Selection.Value[Property] = CFrame.new("..Gui.Text..")")()
+                                                                                                elseif Property == "BrickColor" then
+                                                                                                    loadstring([[_G.Selection.Value[Property] = BrickColor.new("]]..Gui.Text..[[")]])()
+                                                                                                elseif Property == "Ambient" or Property == "ColorShift_Bottom" or Property == "ColorShift_Top" or Property == "OutdoorAmbient" or Property == "ShadowColor" or Property == "FogColor" then
+                                                                                                    loadstring("_G.Selection.Value[Property] = Color3.new("..Gui.Text..")")()
+                                                                                                elseif Property == "Shape" or Property == "FormFactor" then
+                                                                                                    if string.sub(Gui.Text,1,4) == "Enum" then
+                                                                                                        loadstring("_G.Selection.Value[Property] = "..Gui.Text)()
+                                                                                                    else
+                                                                                                        loadstring([[_G.Selection.Value[Property] = "]]..Gui.Text..[["]])()
+                                                                                                    end
+                                                                                                elseif Property == "Color" then
+                                                                                                    if _G.Selection.Value:IsA("SelectionBox") then
+                                                                                                        loadstring([[_G.Selection.Value[Property] = BrickColor.new("]]..Gui.Text..[[")]])()
+                                                                                                    else
+                                                                                                        loadstring("_G.Selection.Value[Property] = Color3.new("..Gui.Text..")")()
+                                                                                                    end
+                                                                                                else
+                                                                                                    loadstring([[_G.Selection.Value[Property] = "]]..Gui.Text..[["]])()
+                                                                                                end
+                                                                                            else
+                                                                                                loadstring([[_G.Selection.Value[Property] = "]]..Gui.Text..[["]])()
+                                                                                            end
+                                                                                        end)
+                                                                                        UpdatePropGuis()
+                                                                                    end)
+                                                                                elseif Gui:IsA("TextButton") then
+                                                                                    Gui.MouseButton1Down:connect(function()
+                                                                                        --            pcall(function()
+                                                                                            Property = Gui.Parent.PropertyName.Text
+                                                                                            if (_G.Selection.Value[Property]) == true then
+                                                                                                _G.Selection.Value[Property] = false
+                                                                                            elseif (_G.Selection.Value[Property]) == false then
+                                                                                                _G.Selection.Value[Property] = true
+                                                                                            end
+                                                                                            --            end)
+                                                                                            UpdatePropGuis()
+                                                                                        end)
+                                                                                    end
+                                                                                end
+                                                                                
+                                                                                UpdateMainGuis()
+                                                                                ItemGuisClicked()
+                                                                                
+                                                                            else -- End of Explorer View...
+                                                                                
+                                                                                if Game:GetService("CoreGui").RobloxGui:FindFirstChild("PlayerListScreen") ~= nil then
+                                                                                    Game:GetService("CoreGui").RobloxGui.PlayerListScreen.Visible = true
+                                                                                end
+                                                                                for i,v in pairs(Game:GetService("CoreGui"):GetChildren()) do
+                                                                                    if v.Name == "ObjectHighlight" then
+                                                                                        v:Remove()
+                                                                                    end
+                                                                                end
+                                                                                if Game:GetService("CoreGui"):FindFirstChild("ExplorerGui") ~= nil then
+                                                                                    Game:GetService("CoreGui").ExplorerGui:Remove()
+                                                                                end
+                                                                                EmptyTable = {}
+                                                                                if MouseFunction ~= nil then
+                                                                                    MouseFunction:disconnect()
+                                                                                    KeyDownFunction:disconnect()
+                                                                                    KeyUpFunction:disconnect()
+                                                                                end
+                                                                            end
+                                                                        end)
+                                                                    end
+                                                                    
+                                                                    -- Mediafire
+                                                                    
+                                                                   
