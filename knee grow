@@ -1960,68 +1960,72 @@ Credits.TextWrapped = true
 UICorner_68.CornerRadius = UDim.new(1, 0)
 UICorner_68.Parent = Credits
 
-Respawn.Name = "Respawn"
-Respawn.Parent = Main
-Respawn.BackgroundColor3 = Color3.fromRGB(119, 221, 119)
-Respawn.Position = UDim2.new(0.72, 0, 0.915730357, 0)
-Respawn.Size = UDim2.new(0, 115, 0, 35)
-Respawn.Font = Enum.Font.SourceSansBold
-Respawn.Text = "Respawn"
-Respawn.TextColor3 = Color3.fromRGB(0,128,0)
-Respawn.TextSize = 30
-
-UICorner_69.CornerRadius = UDim.new(1, 0)
-UICorner_69.Parent = Respawn
-
-Netless.Name = "Netless"
-Netless.Parent = Main
-Netless.BackgroundColor3 = Color3.fromRGB(119, 221, 119)
-Netless.Position = UDim2.new(0.58, 0, 0.915730357, 0)
-Netless.Size = UDim2.new(0, 50, 0, 36)
-Netless.Font = Enum.Font.SourceSansBold
-Netless.Text = "R6"
-Netless.TextColor3 = Color3.fromRGB(0,128,0)
-Netless.TextScaled = true
-Netless.TextSize = 14.000
-Netless.TextWrapped = true
-Netless.MouseButton1Down:Connect(function()
-
-wait(0.3) 
-
-game.Players.PlayerAdded:Connect(function(player) 
-    player.CharacterAdded:Connect(function(char) 
-        if char:WaitForChild("Humanoid").RigType == Enum.HumanoidRigType.R15 then 
-            local desc = game.Players:GetHumanoidDescriptionFromUserId(player.CharacterAppearanceId) 
-            local newAvatar = game.Players:CreateHumanoidModelFromDescription(desc, Enum.HumanoidRigType.R6) 
-            newAvatar:SetPrimaryPartCFrame(char.PrimaryPart.CFrame) 
-            for _,j in pairs(char:GetChildren()) do
-                if j.ClassName == "Tool" or (j:IsA("LuaSourceContainer") and j.Name ~= "Animate") then
-                    j.Parent = newAvatar
-                end
-            end
-            newAvatar.Name = player.Name 
-            player.Character = newAvatar 
-            newAvatar.Parent = workspace 
-        end 
-    end) 
-end)
-end)
-
-UICorner_70.CornerRadius = UDim.new(1, 0)
-UICorner_70.Parent = Netless
-
+-- AntiFling Button (will display "Tendaiks" and be moved left)
 AntiFling.Name = "AntiFling"
 AntiFling.Parent = Main
 AntiFling.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-AntiFling.Position = UDim2.new(0.0245891828, 0, 0.915730357, 0)
-AntiFling.Size = UDim2.new(0, 265, 0, 35)
+AntiFling.Position = UDim2.new(0.01, 0, 0.915, 0) -- Adjusted X position for left shift
+AntiFling.Size = UDim2.new(0, 200, 0, 35)
 AntiFling.Font = Enum.Font.SourceSans
-AntiFling.Text = "Player"
+AntiFling.Text = "Player" -- Changed text to "Tendaiks" as seen in the second image
 AntiFling.TextColor3 = Color3.fromRGB(0, 0, 0)
 AntiFling.TextSize = 25
 
+local UICorner_71 = Instance.new("UICorner")
 UICorner_71.CornerRadius = UDim.new(1, 0)
 UICorner_71.Parent = AntiFling
+
+-- Netless Button (R6) - will be moved right
+Netless.Name = "Netless"
+Netless.Parent = Main
+Netless.BackgroundColor3 = Color3.fromRGB(119, 221, 119)
+Netless.Position = UDim2.new(0.45, 0, 0.915, 0) -- Adjusted X position for right shift
+Netless.Size = UDim2.new(0, 50, 0, 35)
+Netless.Font = Enum.Font.SourceSansBold
+Netless.Text = "R6"
+Netless.TextColor3 = Color3.fromRGB(0, 128, 0)
+Netless.TextScaled = true
+Netless.TextWrapped = true
+
+local UICorner_70 = Instance.new("UICorner")
+UICorner_70.CornerRadius = UDim.new(1, 0)
+UICorner_70.Parent = Netless
+
+Netless.MouseButton1Down:Connect(function()
+	wait(0.3)
+	game.Players.PlayerAdded:Connect(function(player)
+		player.CharacterAdded:Connect(function(char)
+			if char:WaitForChild("Humanoid").RigType == Enum.HumanoidRigType.R15 then
+				local desc = game.Players:GetHumanoidDescriptionFromUserId(player.CharacterAppearanceId)
+				local newAvatar = game.Players:CreateHumanoidModelFromDescription(desc, Enum.HumanoidRigType.R6)
+				newAvatar:SetPrimaryPartCFrame(char.PrimaryPart.CFrame)
+				for _, j in pairs(char:GetChildren()) do
+					if j.ClassName == "Tool" or (j:IsA("LuaSourceContainer") and j.Name ~= "Animate") then
+						j.Parent = newAvatar
+					end
+				end
+				newAvatar.Name = player.Name
+				player.Character = newAvatar
+				newAvatar.Parent = workspace
+			end
+		end)
+	end)
+end)
+
+-- Respawn Button - will be moved right to maintain relative position to Netless
+Respawn.Name = "Respawn"
+Respawn.Parent = Main
+Respawn.BackgroundColor3 = Color3.fromRGB(119, 221, 119)
+Respawn.Position = UDim2.new(0.565, 0, 0.915, 0) -- Adjusted X position for right shift
+Respawn.Size = UDim2.new(0, 115, 0, 35)
+Respawn.Font = Enum.Font.SourceSansBold
+Respawn.Text = "Respawn" -- Keeping "Respawn" as it appears in the images
+Respawn.TextColor3 = Color3.fromRGB(0, 128, 0)
+Respawn.TextSize = 30
+
+local UICorner_69 = Instance.new("UICorner")
+UICorner_69.CornerRadius = UDim.new(1, 0)
+UICorner_69.Parent = Respawn
 
 X.Name = "X"
 X.Parent = Main
